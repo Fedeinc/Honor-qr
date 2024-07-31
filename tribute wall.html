@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute Wall - HonorQR</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation Bar -->
+    <header class="bg-white border-b border-gray-200 fixed top-0 left-0 w-full z-50 shadow-md">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
+                <span class="text-xl font-semibold text-gray-900 ml-3">HonorQR</span>
+            </div>
+            <nav class="hidden md:flex md:ml-4">
+                <ul class="flex space-x-8">
+                    <li><a href="dashboard.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Home</a></li>
+                    <li><a href="profile.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Profile</a></li>
+                    <li><a href="privacy.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Privacy</a></li>
+                    <li><a href="notifications.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Notifications</a></li>
+                    <li><a href="billing.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Billing</a></li>
+                    <li><a href="security.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Security</a></li>
+                    <li><a href="logout.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-500 hover:bg-gray-100 p-2 rounded" id="mobile-menu-button" aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <nav class="hidden md:hidden" id="mobile-menu">
+        <ul class="flex flex-col bg-gray-50 border-t border-gray-200">
+            <li><a href="dashboard.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Home</a></li>
+            <li><a href="profile.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Profile</a></li>
+            <li><a href="privacy.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Privacy</a></li>
+            <li><a href="notifications.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Notifications</a></li>
+            <li><a href="billing.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Billing</a></li>
+            <li><a href="security.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Security</a></li>
+            <li><a href="logout.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-20">
+        <div class="flex">
+            <!-- Left Sidebar -->
+            <!-- Placeholder for left sidebar if needed in future -->
+
+            <!-- Tribute Wall -->
+            <section class="w-full md:w-2/3 bg-white rounded-lg shadow-lg flex flex-col">
+                <header class="p-4 flex items-center justify-between border-b">
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full" src="IMAGES/Photoleap_29_06_2024_16_19_40_LSzLJ.jpg" alt="Tribute Image">
+                        <div class="ml-4">
+                            <p class="text-gray-900">Tributes for John Doe</p>
+                            <p class="text-gray-600 text-sm">Family and Friends</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button aria-label="Search" class="p-2">
+                            <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path>
+                            </svg>
+                        </button>
+                        <button aria-label="Attach" class="p-2">
+                            <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972s2.472 1.647 3.974 1.647a5.58 5.58 0 0 0 3.972-1.645l9.547-9.548c.769-.768 1.147-1.767 1.058-2.817-.079-.968-.548-1.927-1.319-2.698-1.594-1.592-4.068-1.711-5.517-.262l-7.916 7.915c-.881.881-.792 2.25.214 3.261.959.958 2.423 1.053 3.263.215l5.511-5.512c.28-.28.267-.722.053-.936l-.244-.244c-.191-.191-.567-.349-.957.04l-5.506 5.506c-.18.18-.635.127-.976-.214-.098-.097-.576-.613-.213-.973l7.915-7.917c.818-.817 2.267-.699 3.23.262.5.501.802 1.1.849 1.685.051.573-.156 1.111-.589 1.543l-9.547 9.549a3.97 3.97 0 0 1-2.829 1.171 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.172-2.828c0-1.071.415-2.076 1.172-2.83l7.209-7.211c.157-.157.264-.579.028-.814L11.5 4.36a.572.572 0 0 0-.834.018l-7.205 7.207a5.577 5.577 0 0 0-1.645 3.971z"></path>
+                            </svg>
+                        </button>
+                        <button aria-label="Menu" class="p-2">
+                            <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+                <div class="flex-1 overflow-auto p-4 bg-gray-100">
+                    <!-- Date -->
+                    <div class="flex justify-center mb-4">
+                        <div class="rounded py-2 px-4 bg-gray-200">
+                            <p class="text-sm uppercase">February 20, 2024</p>
+                        </div>
+                    </div>
+
+                    <!-- Info Message -->
+                    <div class="flex justify-center mb-4">
+                        <div class="rounded py-2 px-4 bg-yellow-200">
+                            <p class="text-xs">Messages on this tribute wall are secure and private. Tap for more info.</p>
+                        </div>
+                    </div>
+
+                    <!-- Messages -->
+                    <article class="flex mb-4">
+                        <div class="rounded py-2 px-4 bg-gray-100">
+                            <p class="text-sm text-teal-600">Jane Doe</p>
+                            <p class="text-sm">I remember the wonderful times we shared. You will always be in my heart.</p>
+                            <p class="text-xs text-gray-500 text-right">12:45 pm</p>
+                        </div>
+                    </article>
+                    <article class="flex mb-4">
+                        <div class="rounded py-2 px-4 bg-gray-100">
+                            <p class="text-sm text-purple-600">Mark Smith</p>
+                            <p class="text-sm">Your legacy will live on in all the lives you touched.</p>
+                            <p class="text-xs text-gray-500 text-right">1:00 pm</p>
+                        </div>
+                    </article>
+                    <article class="flex justify-end mb-4">
+                        <div class="rounded py-2 px-4 bg-green-200">
+                            <p class="text-sm">Thinking of you today.</p>
+                            <p class="text-xs text-gray-500 text-right">2:30 pm</p>
+                        </div>
+                    </article>
+                    <article class="flex justify-end mb-4">
+                        <div class="rounded py-2 px-4 bg-green-200">
+                            <p class="text-sm">Miss you so much.</p>
+                            <p class="text-xs text-gray-500 text-right">3:45 pm</p>
+                        </div>
+                    </article>
+                    <article class="flex mb-4">
+                        <div class="rounded py-2 px-4 bg-gray-100">
+                            <p class="text-sm text-purple-600">Emily Johnson</p>
+                            <p class="text-sm">Your smile and laughter will never be forgotten.</p>
+                            <p class="text-xs text-gray-500 text-right">4:15 pm</p>
+                        </div>
+                    </article>
+
+                    <!-- Photos and Videos -->
+                    <article class="flex justify-center mb-4">
+                        <div class="rounded py-2 px-4 bg-white shadow-md">
+                            <p class="text-sm text-gray-600">Photo Tribute</p>
+                            <img src="IMAGES/Photoleap_29_06_2024_16_21_11_N4fVF.jpg" alt="Photo Tribute" class="w-full mt-2 rounded-lg">
+                        </div>
+                    </article>
+                    <article class="flex justify-center mb-4">
+                        <div class="rounded py-2 px-4 bg-white shadow-md">
+                            <p class="text-sm text-gray-600">Video Tribute</p>
+                            <video controls class="w-full mt-2 rounded-lg">
+                                <source src="VIDEOS/sample-video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </article>
+                </div>
+                <footer class="p-4 border-t flex items-center">
+                    <input type="text" class="w-full p-2 border rounded-lg" placeholder="Type a message" aria-label="Type a message">
+                    <button aria-label="Send" class="ml-2 p-2">
+                        <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M11.999 14.942c2.001 0 3.531-1.53 3.531-3.531V4.35c0-2.001-1.53-3.531-3.531-3.531S8.469 2.35 8.469 4.35v7.061c0 2.001 1.53 3.531 3.53 3.531zm6.238-3.53c0 3.531-2.942 6.002-6.237 6.002s-6.237-2.471-6.237-6.002H3.761c0 4.001 3.178 7.297 7.061 7.885v3.884h2.354v-3.884c3.884-.588 7.061-3.884 7.061-7.885h-2z"></path>
+                        </svg>
+                    </button>
+                </footer>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <span class="text-sm font-bold">&copy; 2024 HonorQR. All rights reserved.</span>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
