@@ -14,122 +14,120 @@
 <body class="bg-gray-100">
 
     <!-- Navigation -->
-    <!-- Navigation Bar -->
-<nav class="bg-white border-b border-gray-200 fixed top-0 left-0 w-full z-50 shadow-md">
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-            <div class="flex items-center">
-                <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
-                <span class="text-xl font-semibold text-gray-900 ml-3">HonorQR</span>
-            </div>
-            <div class="hidden md:flex md:ml-4">
-                <ul class="flex space-x-8">
-                    <li><a href="dashboard.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Home</a></li>
-                    <li><a href="profile.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Profile</a></li>
-                    <li><a href="privacy.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Privacy</a></li>
-                    <li><a href="notifications.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Notifications</a></li>
-                    <li><a href="billing.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Billing</a></li>
-                    <li><a href="security.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Security</a></li>
-                    <li><a href="logout.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Logout</a></li>
-                </ul>
-            </div>
-            <div class="md:hidden">
-                <button class="text-gray-500 hover:bg-gray-100 p-2 rounded" id="mobile-menu-button" aria-label="Toggle Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+    <nav class="top-0 left-0 z-50 fixed border-gray-200 bg-white shadow-md border-b w-full">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
+                    <span class="ml-3 font-semibold text-gray-900 text-xl">HonorQR</span>
+                </div>
+                <div class="md:flex hidden md:ml-4">
+                    <ul class="flex space-x-8">
+                        <li><a href="dashboard.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Home</a></li>
+                        <li><a href="profile.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Profile</a></li>
+                        <li><a href="privacy.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Privacy</a></li>
+                        <li><a href="notifications.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Notifications</a></li>
+                        <li><a href="billing.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Billing</a></li>
+                        <li><a href="security.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Security</a></li>
+                        <li><a href="logout.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden">
+                    <button class="hover:bg-gray-100 p-2 rounded text-gray-500" id="mobile-menu-button" aria-label="Toggle Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="hidden md:hidden" id="mobile-menu">
-        <ul class="flex flex-col bg-gray-50 border-t border-gray-200">
-            <li><a href="dashboard.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Home</a></li>
-            <li><a href="profile.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Profile</a></li>
-            <li><a href="privacy.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Privacy</a></li>
-            <li><a href="notifications.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Notifications</a></li>
-            <li><a href="billing.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Billing</a></li>
-            <li><a href="security.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Security</a></li>
-            <li><a href="logout.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Logout</a></li>
-        </ul>
-    </div>
-</nav>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <ul class="flex flex-col border-gray-200 bg-gray-50 border-t">
+                <li><a href="dashboard.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Home</a></li>
+                <li><a href="profile.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Profile</a></li>
+                <li><a href="privacy.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Privacy</a></li>
+                <li><a href="notifications.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Notifications</a></li>
+                <li><a href="billing.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Billing</a></li>
+                <li><a href="security.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Security</a></li>
+                <li><a href="logout.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<script>
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
-    });
-</script>
-
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
     <!-- Profile Header -->
     <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold text-gray-900">John Doe</h1>
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 py-6 max-w-7xl">
+            <h1 class="font-bold text-3xl text-gray-900">John Doe</h1>
             <p class="mt-1 text-gray-600">In loving memory of John Doe, a beloved father, husband, and friend. 1950 - 2023</p>
         </div>
     </header>
 
     <!-- Profile Content -->
     <main class="py-10">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <!-- Main Content -->
-            <div class="bg-white shadow overflow-hidden sm:rounded-lg">
-                <div class="px-4 py-5 sm:px-6">
-                    <h3 class="text-lg leading-6 font-medium text-gray-900">Profile Information</h3>
-                    <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and memories of John Doe.</p>
+            <div class="bg-white shadow sm:rounded-lg overflow-hidden">
+                <div class="px-4 sm:px-6 py-5">
+                    <h3 class="font-medium text-gray-900 text-lg leading-6">Profile Information</h3>
+                    <p class="mt-1 max-w-2xl text-gray-500 text-sm">Personal details and memories of John Doe.</p>
                 </div>
-                <div class="border-t border-gray-200">
+                <div class="border-gray-200 border-t">
                     <dl>
-                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Full name</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">John Doe</dd>
+                        <div class="sm:gap-4 sm:grid sm:grid-cols-3 bg-gray-50 px-4 sm:px-6 py-5">
+                            <dt class="font-medium text-gray-500 text-sm">Full name</dt>
+                            <dd class="sm:col-span-2 mt-1 sm:mt-0 text-gray-900 text-sm">John Doe</dd>
                         </div>
-                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Date of Birth</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">January 1, 1950</dd>
+                        <div class="sm:gap-4 sm:grid sm:grid-cols-3 bg-white px-4 sm:px-6 py-5">
+                            <dt class="font-medium text-gray-500 text-sm">Date of Birth</dt>
+                            <dd class="sm:col-span-2 mt-1 sm:mt-0 text-gray-900 text-sm">January 1, 1950</dd>
                         </div>
-                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Date of Passing</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">June 30, 2023</dd>
+                        <div class="sm:gap-4 sm:grid sm:grid-cols-3 bg-gray-50 px-4 sm:px-6 py-5">
+                            <dt class="font-medium text-gray-500 text-sm">Date of Passing</dt>
+                            <dd class="sm:col-span-2 mt-1 sm:mt-0 text-gray-900 text-sm">June 30, 2023</dd>
                         </div>
-                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Biography</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">John Doe was a man of great wisdom and kindness. He loved his family deeply and was always there to lend a helping hand...</dd>
+                        <div class="sm:gap-4 sm:grid sm:grid-cols-3 bg-white px-4 sm:px-6 py-5">
+                            <dt class="font-medium text-gray-500 text-sm">Biography</dt>
+                            <dd class="sm:col-span-2 mt-1 sm:mt-0 text-gray-900 text-sm">John Doe was a man of great wisdom and kindness. He loved his family deeply and was always there to lend a helping hand...</dd>
                         </div>
-                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Gallery</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <div class="sm:gap-4 sm:grid sm:grid-cols-3 bg-gray-50 px-4 sm:px-6 py-5">
+                            <dt class="font-medium text-gray-500 text-sm">Gallery</dt>
+                            <dd class="sm:col-span-2 mt-1 sm:mt-0 text-gray-900 text-sm">
                                 <!-- Gallery -->
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                    <img src="IMAGES/IMG-20240618-WA0031.jpg" alt="Photo 1" class="rounded-lg shadow-lg">
-                                    <img src="IMAGES/Photoleap_29_06_2024_16_19_17_u0BnK.jpg" alt="Photo 2" class="rounded-lg shadow-lg">
-                                    <img src="IMAGES/Photoleap_29_06_2024_16_19_40_LSzLJ.jpg" alt="Photo 3" class="rounded-lg shadow-lg">
-                                    <img src="IMAGES/Photoleap_24_06_2024_23_14_19_vrjjZ.jpg" alt="Photo 4" class="rounded-lg shadow-lg">
+                                <div class="gap-4 grid grid-cols-2 md:grid-cols-4">
+                                    <img src="IMAGES/IMG-20240618-WA0031.jpg" alt="Photo 1" class="shadow-lg rounded-lg">
+                                    <img src="IMAGES/Photoleap_29_06_2024_16_19_17_u0BnK.jpg" alt="Photo 2" class="shadow-lg rounded-lg">
+                                    <img src="IMAGES/Photoleap_29_06_2024_16_19_40_LSzLJ.jpg" alt="Photo 3" class="shadow-lg rounded-lg">
+                                    <img src="IMAGES/Photoleap_24_06_2024_23_14_19_vrjjZ.jpg" alt="Photo 4" class="shadow-lg rounded-lg">
                                 </div>
                             </dd>
                         </div>
-                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Tribute Wall</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <div class="sm:gap-4 sm:grid sm:grid-cols-3 bg-white px-4 sm:px-6 py-5">
+                            <dt class="font-medium text-gray-500 text-sm">Tribute Wall</dt>
+                            <dd class="sm:col-span-2 mt-1 sm:mt-0 text-gray-900 text-sm">
                                 <div class="space-y-4">
-                                    <div class="p-4 bg-gray-50 rounded-lg shadow-md">
-                                        <p class="text-sm text-gray-900"><strong>Jane Smith:</strong> John was an incredible person who always knew how to make everyone smile. He will be deeply missed.</p>
+                                    <div class="bg-gray-50 shadow-md p-4 rounded-lg">
+                                        <p class="text-gray-900 text-sm"><strong>Jane Smith:</strong> John was an incredible person who always knew how to make everyone smile. He will be deeply missed.</p>
                                     </div>
-                                    <div class="p-4 bg-gray-50 rounded-lg shadow-md">
-                                        <p class="text-sm text-gray-900"><strong>Michael Brown:</strong> I remember the great times we had together during our college days. Rest in peace, my friend.</p>
+                                    <div class="bg-gray-50 shadow-md p-4 rounded-lg">
+                                        <p class="text-gray-900 text-sm"><strong>Michael Brown:</strong> I remember the great times we had together during our college days. Rest in peace, my friend.</p>
                                     </div>
                                     <!-- Add more tributes here -->
                                 </div>
                                 <!-- Tribute form -->
-                                <form class="mt-4 space-y-4">
+                                <form class="space-y-4 mt-4">
                                     <div>
-                                        <label for="tribute" class="block text-sm font-medium text-gray-700">Leave a Tribute</label>
-                                        <textarea id="tribute" name="tribute" rows="4" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
+                                        <label for="tribute" class="block font-medium text-gray-700 text-sm">Leave a Tribute</label>
+                                        <textarea id="tribute" name="tribute" rows="4" class="block border-gray-300 shadow-sm mt-1 rounded-md w-full sm:text-sm"></textarea>
                                     </div>
                                     <div class="text-right">
-                                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">Submit</button>
+                                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md text-white">Submit</button>
                                     </div>
                                 </form>
                             </dd>
@@ -141,11 +139,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center justify-between">
+    <footer class="bg-gray-900 py-8 text-white">
+        <div class="mx-auto px-4 container">
+            <div class="flex md:flex-row flex-col justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <span class="text-2xl font-semibold">HonorQR</span>
+                    <span class="font-semibold text-2xl">HonorQR</span>
                     <span class="block text-gray-400">© 2024 All rights reserved.</span>
                 </div>
                 <div class="flex space-x-4">

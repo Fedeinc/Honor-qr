@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HonorQR - Preserve Memories Forever</title>
     <meta name="description" content="HonorQR integrates technology with traditional memorials, offering a dynamic and interactive way to remember loved ones.">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link href="public/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* Loading animation */
         #loading {
@@ -30,13 +30,13 @@
 
         /* Custom cursor styles */
         body {
-            cursor: url('IMAGES/DALL·E 2024-07-30 13.42.13 - A sleek, modern arrow cursor icon isolated on a transparent background. The icon should be simple and minimalistic, with clean lines and a slight shad.webp'), auto;
+            cursor: url('https://source.unsplash.com/random/32x32?cursor'), auto;
         }
         .btn-primary {
-            cursor: url('IMAGES/DALL·E 2024-07-30 13.43.22 - A sleek, modern cursor pointer icon, resembling a hand with an extended index finger, isolated on a transparent background. The design should be simpl.webp'), pointer;
+            cursor: url('https://source.unsplash.com/random/32x32?pointer'), pointer;
         }
         .interactive-element:hover {
-            cursor: url('IMAGES/DALL·E 2024-07-30 13.43.34 - A sleek, modern cursor icon in a hover state, with a subtle glow or highlight effect around the arrow, isolated on a transparent background. The desig.webp'), pointer;
+            cursor: url('https://source.unsplash.com/random/32x32?hover'), pointer;
         }
         .background-change:hover {
             background-color: rgba(37, 99, 235, 0.1);
@@ -63,7 +63,7 @@
 
         /* Hero background */
         .hero-bg {
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('IMAGES/hero.webp');
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('https://source.unsplash.com/random/1920x1080?memorial');
             background-size: cover;
             background-position: center center;
         }
@@ -196,32 +196,32 @@
 <body class="bg-gray-100">
     <!-- Loading animation -->
     <div id="loading">
-        <img src="IMAGES/Animation - 1722370313157.gif" alt="Loading">
+        <img src="https://source.unsplash.com/random/100x100?loading" alt="Loading">
     </div>
 
     <!-- Navigation -->
-    <nav class="nav-bg fixed top-0 left-0 w-full z-50 shadow-md">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+    <nav class="top-0 left-0 z-50 fixed bg-gray-800 shadow-md w-full">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
+            <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center space-x-3">
-                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
-                        <span class="text-xl font-semibold text-white">HonorQR</span>
+                        <img src="https://source.unsplash.com/random/40x40?logo" class="h-10" alt="HonorQR Logo">
+                        <span class="font-semibold text-white text-xl">HonorQR</span>
                     </a>
                 </div>
-                <div class="hidden md:flex md:ml-4">
+                <div class="md:flex hidden md:ml-4">
                     <ul class="flex space-x-8">
-                        <li><a href="index.html" class="nav-link px-3 py-2 rounded">Home</a></li>
-                        <li><a href="about.html" class="nav-link px-3 py-2 rounded">About</a></li>
-                        <li><a href="features.html" class="nav-link px-3 py-2 rounded">Features</a></li>
-                        <li><a href="prices.html" class="nav-link px-3 py-2 rounded">Prices</a></li>
-                        <li><a href="faq.html" class="nav-link px-3 py-2 rounded">FAQ</a></li>
-                        <li><a href="contact.html" class="nav-link px-3 py-2 rounded">Contact</a></li>
-                        <li><a href="login.html" class="nav-link px-3 py-2 rounded">Login</a></li>
+                        <li><a href="index.html" class="px-3 py-2 rounded text-white">Home</a></li>
+                        <li><a href="about.html" class="px-3 py-2 rounded text-white">About</a></li>
+                        <li><a href="features.html" class="px-3 py-2 rounded text-white">Features</a></li>
+                        <li><a href="prices.html" class="px-3 py-2 rounded text-white">Prices</a></li>
+                        <li><a href="faq.html" class="px-3 py-2 rounded text-white">FAQ</a></li>
+                        <li><a href="contact.html" class="px-3 py-2 rounded text-white">Contact</a></li>
+                        <li><a href="login.html" class="px-3 py-2 rounded text-white">Login</a></li>
                     </ul>
                 </div>
                 <div class="md:hidden">
-                    <button id="hamburger-button" class="inline-flex items-center justify-center p-2 text-white rounded-lg hover:bg-gray-700">
+                    <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -231,37 +231,37 @@
             </div>
         </div>
         <div class="hidden md:hidden" id="mobile-menu">
-            <ul class="flex flex-col mt-2 space-y-2 bg-gray-700">
-                <li><a href="index.html" class="nav-link block px-4 py-2 rounded">Home</a></li>
-                <li><a href="about.html" class="nav-link block px-4 py-2 rounded">About</a></li>
-                <li><a href="features.html" class="nav-link block px-4 py-2 rounded">Features</a></li>
-                <li><a href="prices.html" class="nav-link block px-4 py-2 rounded">Prices</a></li>
-                <li><a href="faq.html" class="nav-link block px-4 py-2 rounded">FAQ</a></li>
-                <li><a href="contact.html" class="nav-link block px-4 py-2 rounded">Contact</a></li>
-                <li><a href="login.html" class="nav-link block px-4 py-2 rounded">Login</a></li>
+            <ul class="flex flex-col space-y-2 bg-gray-700 mt-2">
+                <li><a href="index.html" class="block px-4 py-2 rounded text-white">Home</a></li>
+                <li><a href="about.html" class="block px-4 py-2 rounded text-white">About</a></li>
+                <li><a href="features.html" class="block px-4 py-2 rounded text-white">Features</a></li>
+                <li><a href="prices.html" class="block px-4 py-2 rounded text-white">Prices</a></li>
+                <li><a href="faq.html" class="block px-4 py-2 rounded text-white">FAQ</a></li>
+                <li><a href="contact.html" class="block px-4 py-2 rounded text-white">Contact</a></li>
+                <li><a href="login.html" class="block px-4 py-2 rounded text-white">Login</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg bg-cover bg-center h-screen flex items-center justify-center">
-        <div class="container mx-auto text-center text-white px-4">
-            <h1 class="text-6xl font-serif mb-4 fade-in">Welcome to HonorQR.</h1>
-            <p class="text-2xl font-sans mb-8 fade-in" data-aos="fade-up">Embrace the Future of Digital Memorials</p>
-            <a href="#features" class="btn-primary py-3 px-6 rounded-lg text-lg">Discover More</a>
+    <section class="flex justify-center items-center bg-cover bg-center h-screen hero-bg">
+        <div class="mx-auto px-4 text-center text-white container">
+            <h1 class="mb-4 font-serif text-6xl fade-in">Welcome to HonorQR.</h1>
+            <p class="mb-8 font-sans text-2xl fade-in" data-aos="fade-up">Embrace the Future of Digital Memorials</p>
+            <a href="#features" class="px-6 py-3 rounded-lg text-lg btn-primary">Discover More</a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-12 bg-white">
-        <div class="container mx-auto px-4">
+    <section id="features" class="bg-white py-12">
+        <div class="mx-auto px-4 container">
             <div class="mb-8 text-center">
-                <h2 class="text-4xl font-bold mb-4 text-gray-900">Our Features</h2>
-                <p class="text-lg text-gray-700">Explore the powerful features of HonorQR, designed to preserve and celebrate the memories of your loved ones.</p>
+                <h2 class="mb-4 font-bold text-4xl text-gray-900">Our Features</h2>
+                <p class="text-gray-700 text-lg">Explore the powerful features of HonorQR, designed to preserve and celebrate the memories of your loved ones.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="gap-8 grid grid-cols-1 md:grid-cols-3">
                 <article class="card">
-                    <img src="IMAGES/feature 1.jpg" alt="Journey Through Memories" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/350x350?memory" alt="Journey Through Memories" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Journey Through Memories</span>
                         <span class="card_subtitle">A gallery filled with moments frozen in time.</span>
@@ -269,7 +269,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="IMAGES/feature 2.jpg" alt="Connect Beyond Boundaries" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/350x350?connect" alt="Connect Beyond Boundaries" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Connect Beyond Boundaries</span>
                         <span class="card_subtitle">Our interactive Tribute Wall.</span>
@@ -277,7 +277,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="IMAGES/feature 3.jpg" alt="Empowerment Through Personalization" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/350x350?personalize" alt="Empowerment Through Personalization" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Empowerment Through Personalization</span>
                         <span class="card_subtitle">Shape your loved one's digital legacy.</span>
@@ -289,38 +289,38 @@
     </section>
 
     <!-- Additional Features Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 fade-in">HonorQR Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-200">
-                    <img src="IMAGES/feature 3.jpg" alt="Feature 1" class="w-20 h-20 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Digital Memorials</h3>
+    <section class="bg-white py-16">
+        <div class="mx-auto px-4 text-center container">
+            <h2 class="mb-12 font-bold text-4xl text-gray-900 fade-in">HonorQR Features</h2>
+            <div class="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white shadow-lg p-6 rounded-lg transform transition duration-300 hover:scale-105 animation-delay-200 fade-in">
+                    <img src="https://source.unsplash.com/random/80x80?memorial" alt="Feature 1" class="mx-auto mb-4 w-20 h-20">
+                    <h3 class="mb-2 font-semibold text-2xl text-gray-800">Digital Memorials</h3>
                     <p class="text-gray-700">Create personalized digital memorials that preserve the legacy of your loved ones with photos, videos, and stories.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-400">
-                    <img src="IMAGES/IMG-20240618-WA0034.jpg" alt="Feature 2" class="w-20 h-20 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Interactive Tribute Wall</h3>
+                <div class="bg-white shadow-lg p-6 rounded-lg transform transition duration-300 hover:scale-105 animation-delay-400 fade-in">
+                    <img src="https://source.unsplash.com/random/80x80?tribute" alt="Feature 2" class="mx-auto mb-4 w-20 h-20">
+                    <h3 class="mb-2 font-semibold text-2xl text-gray-800">Interactive Tribute Wall</h3>
                     <p class="text-gray-700">Engage with a community of loved ones through shared messages and stories on the interactive tribute wall.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-600">
-                    <img src="IMAGES/IMG-20240618-WA0042.jpg" alt="Feature 3" class="w-20 h-20 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">QR Code Integration</h3>
+                <div class="bg-white shadow-lg p-6 rounded-lg transform transition duration-300 hover:scale-105 animation-delay-600 fade-in">
+                    <img src="https://source.unsplash.com/random/80x80?qr" alt="Feature 3" class="mx-auto mb-4 w-20 h-20">
+                    <h3 class="mb-2 font-semibold text-2xl text-gray-800">QR Code Integration</h3>
                     <p class="text-gray-700">Seamlessly link physical memorials to digital profiles with durable, weatherproof QR codes.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-800">
-                    <img src="IMAGES/Photoleap_27_06_2024_00_24_54_MOFQY.jpg" alt="Feature 4" class="w-20 h-20 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Audio Memories</h3>
+                <div class="bg-white shadow-lg p-6 rounded-lg transform transition duration-300 hover:scale-105 animation-delay-800 fade-in">
+                    <img src="https://source.unsplash.com/random/80x80?audio" alt="Feature 4" class="mx-auto mb-4 w-20 h-20">
+                    <h3 class="mb-2 font-semibold text-2xl text-gray-800">Audio Memories</h3>
                     <p class="text-gray-700">Preserve voices and stories with audio messages that add a personal and intimate dimension to memorials.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-1000">
-                    <img src="IMAGES/Photoleap_30_07_2024_18_47_41_0jfSA.jpg" alt="Feature 5" class="w-20 h-20 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Multilingual Support</h3>
+                <div class="bg-white shadow-lg p-6 rounded-lg transform transition duration-300 hover:scale-105 animation-delay-1000 fade-in">
+                    <img src="https://source.unsplash.com/random/80x80?multilingual" alt="Feature 5" class="mx-auto mb-4 w-20 h-20">
+                    <h3 class="mb-2 font-semibold text-2xl text-gray-800">Multilingual Support</h3>
                     <p class="text-gray-700">Ensure accessibility for a global audience with multilingual support, allowing everyone to engage meaningfully.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-1200">
-                    <img src="IMAGES/IMG-20240708-WA0002.jpg" alt="Feature 6" class="w-20 h-20 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Mobile App</h3>
+                <div class="bg-white shadow-lg p-6 rounded-lg transform transition duration-300 hover:scale-105 animation-delay-1200 fade-in">
+                    <img src="https://source.unsplash.com/random/80x80?mobile" alt="Feature 6" class="mx-auto mb-4 w-20 h-20">
+                    <h3 class="mb-2 font-semibold text-2xl text-gray-800">Mobile App</h3>
                     <p class="text-gray-700">Access and interact with memorials on-the-go with our user-friendly mobile app, ensuring connection anytime, anywhere.</p>
                 </div>
             </div>
@@ -328,44 +328,44 @@
     </section>
 
     <!-- Emotional Appeal Section -->
-    <section id="emotional-appeal" class="py-16 bg-white relative overflow-hidden">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 fade-in animation-delay-200 text-center md:text-left">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Discover a Digital Sanctuary</h2>
-                <p class="text-xl text-gray-700 mb-8">
+    <section id="emotional-appeal" class="relative bg-white py-16 overflow-hidden">
+        <div class="flex md:flex-row flex-col items-center mx-auto px-4 container">
+            <div class="md:w-1/2 text-center md:text-left animation-delay-200 fade-in">
+                <h2 class="mb-4 font-bold text-4xl text-gray-900">Discover a Digital Sanctuary</h2>
+                <p class="mb-8 text-gray-700 text-xl">
                     Imagine standing amidst a serene cemetery where each gravestone holds a hidden treasure. With a simple scan of a discreet QR code, a virtual gateway opens, leading you to a personalized web profile dedicated to your loved one. This digital sanctuary preserves their legacy, filled with photos, videos, and heartfelt stories that celebrate their life. HonorQR transforms traditional memorials into a timeless tapestry of remembrance, ensuring that the essence of your loved one endures forever.
                 </p>
-                <button class="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded animation-delay-600 animate-pulse">Learn More</button>
+                <button class="bg-gray-900 hover:bg-gray-700 px-4 py-2 rounded font-bold text-white animate-pulse animation-delay-600">Learn More</button>
             </div>
-            <div class="md:w-1/2 fade-in animation-delay-400 relative">
-                <img src="IMAGES/IMG-20240618-WA0006.jpg" alt="Digital Sanctuary Image" class="w-full h-auto rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
-                <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition duration-300">
-                    <img src="IMAGES/IMG-20240618-WA0047.jpg" alt="Digital Sanctuary Image" class="w-full h-auto rounded-lg shadow-lg">
+            <div class="relative md:w-1/2 animation-delay-400 fade-in">
+                <img src="https://source.unsplash.com/random/800x600?sanctuary" alt="Digital Sanctuary Image" class="shadow-lg rounded-lg w-full h-auto transform transition duration-300 hover:scale-105">
+                <div class="top-0 left-0 absolute opacity-0 hover:opacity-100 w-full h-full transition duration-300">
+                    <img src="https://source.unsplash.com/random/800x600?sanctuary" alt="Digital Sanctuary Image" class="shadow-lg rounded-lg w-full h-auto">
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Testimonials Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 fade-in">User Stories and Testimonials</h2>
-            <div class="carousel relative fade-in animation-delay-200">
-                <div class="carousel-inner flex">
-                    <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
-                        <p class="text-lg text-gray-700 mb-4">"HonorQR helped us create a beautiful tribute for our beloved grandfather. The interactive tribute wall allowed us to share and cherish our memories together."</p>
+    <section class="bg-white py-16">
+        <div class="mx-auto px-4 text-center container">
+            <h2 class="mb-12 font-bold text-4xl text-gray-900 fade-in">User Stories and Testimonials</h2>
+            <div class="relative animation-delay-200 carousel fade-in">
+                <div class="flex carousel-inner">
+                    <div class="bg-white shadow-lg p-6 rounded-lg carousel-item">
+                        <p class="mb-4 text-gray-700 text-lg">"HonorQR helped us create a beautiful tribute for our beloved grandfather. The interactive tribute wall allowed us to share and cherish our memories together."</p>
                         <p class="font-semibold text-gray-900">- Emily R.</p>
                     </div>
-                    <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
-                        <p class="text-lg text-gray-700 mb-4">"The digital memorials provided by HonorQR are truly amazing. We can now preserve and share our mother's legacy with future generations."</p>
+                    <div class="bg-white shadow-lg p-6 rounded-lg carousel-item">
+                        <p class="mb-4 text-gray-700 text-lg">"The digital memorials provided by HonorQR are truly amazing. We can now preserve and share our mother's legacy with future generations."</p>
                         <p class="font-semibold text-gray-900">- Michael T.</p>
                     </div>
-                    <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
-                        <p class="text-lg text-gray-700 mb-4">"Using HonorQR's QR code integration, we were able to link our father's physical memorial to his digital profile. It's a wonderful way to keep his memory alive."</p>
+                    <div class="bg-white shadow-lg p-6 rounded-lg carousel-item">
+                        <p class="mb-4 text-gray-700 text-lg">"Using HonorQR's QR code integration, we were able to link our father's physical memorial to his digital profile. It's a wonderful way to keep his memory alive."</p>
                         <p class="font-semibold text-gray-900">- Sarah W.</p>
                     </div>
-                    <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
-                        <p class="text-lg text-gray-700 mb-4">"The mobile app makes it so easy to access and update my brother's memorial. HonorQR has made the grieving process a bit easier by keeping us connected."</p>
+                    <div class="bg-white shadow-lg p-6 rounded-lg carousel-item">
+                        <p class="mb-4 text-gray-700 text-lg">"The mobile app makes it so easy to access and update my brother's memorial. HonorQR has made the grieving process a bit easier by keeping us connected."</p>
                         <p class="font-semibold text-gray-900">- David L.</p>
                     </div>
                 </div>
@@ -375,109 +375,89 @@
         </div>
     </section>
 
-    <script>
-        let currentIndex = 0;
-
-        function moveCarousel(direction) {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const totalItems = document.querySelectorAll('.carousel-item').length;
-
-            currentIndex += direction;
-
-            if (currentIndex < 0) {
-                currentIndex = totalItems - 1;
-            } else if (currentIndex >= totalItems) {
-                currentIndex = 0;
-            }
-
-            carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    </script>
-    
     <!-- Get Started Section -->
-    <section class="py-16 bg-cover bg-center" style="background-image: url('IMAGES/DALL·E 2024-07-30 10.37.38 - A serene and modern memorial space at dusk, featuring minimalist architecture with tall, sleek pillars and ambient lighting. The pathway is illuminate.webp');">
-        <div class="container mx-auto px-4 text-center bg-white bg-opacity-70 py-12 rounded-lg">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4 fade-in">Get Started with HonorQR</h2>
-            <p class="text-xl text-gray-700 mb-8 fade-in animation-delay-200">Experience the transformative power of digital memorials with HonorQR. Create lasting tributes, preserve cherished memories, and celebrate lives lived.</p>
-            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
-                <a href="signup.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in animation-delay-400">Sign Up</a>
-                <a href="features.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in animation-delay-600">Explore Features</a>
-                <a href="contact.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in animation-delay-800">Contact Support</a>
+    <section class="bg-cover bg-center py-16" style="background-image: url('https://source.unsplash.com/random/1920x1080?memorial-space');">
+        <div class="bg-white bg-opacity-70 mx-auto px-4 py-12 rounded-lg text-center container">
+            <h2 class="mb-4 font-bold text-4xl text-gray-900 fade-in">Get Started with HonorQR</h2>
+            <p class="mb-8 text-gray-700 text-xl animation-delay-200 fade-in">Experience the transformative power of digital memorials with HonorQR. Create lasting tributes, preserve cherished memories, and celebrate lives lived.</p>
+            <div class="flex md:flex-row flex-col justify-center md:space-x-4 space-y-4 md:space-y-0">
+                <a href="signup.html" class="px-6 py-3 rounded-lg text-lg animation-delay-400 btn-primary fade-in">Sign Up</a>
+                <a href="features.html" class="px-6 py-3 rounded-lg text-lg animation-delay-600 btn-primary fade-in">Explore Features</a>
+                <a href="contact.html" class="px-6 py-3 rounded-lg text-lg animation-delay-800 btn-primary fade-in">Contact Support</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Us Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-            <p class="text-xl text-gray-700 mb-8">Have questions or need assistance? Our team is here to help.</p>
-            <form action="#" method="post" class="max-w-lg mx-auto text-left">
+    <section class="bg-white py-16">
+        <div class="mx-auto px-4 text-center container">
+            <h2 class="mb-4 font-bold text-4xl text-gray-900">Contact Us</h2>
+            <p class="mb-8 text-gray-700 text-xl">Have questions or need assistance? Our team is here to help.</p>
+            <form action="#" method="post" class="mx-auto max-w-lg text-left" data-netlify="true">
                 <div class="mb-4">
-                    <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-4 py-2 input-field" required>
+                    <label for="name" class="block mb-2 font-bold text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="px-4 py-2 w-full input-field" required>
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-2 input-field" required>
+                    <label for="email" class="block mb-2 font-bold text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="px-4 py-2 w-full input-field" required>
                 </div>
                 <div class="mb-4">
-                    <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
-                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 input-field" required></textarea>
+                    <label for="message" class="block mb-2 font-bold text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4" class="px-4 py-2 w-full input-field" required></textarea>
                 </div>
-                <button type="submit" class="btn-primary py-3 px-6 rounded-lg text-lg">Send Message</button>
+                <button type="submit" class="px-6 py-3 rounded-lg text-lg btn-primary">Send Message</button>
             </form>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between">
-            <!-- Navigation Links -->
-            <div class="mb-8 md:mb-0">
-                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-                <ul>
-                    <li class="mb-2"><a href="about.html" class="hover:underline">About</a></li>
-                    <li class="mb-2"><a href="features.html" class="hover:underline">Features</a></li>
-                    <li class="mb-2"><a href="how-it-works.html" class="hover:underline">How It Works</a></li>
-                    <li class="mb-2"><a href="blog.html" class="hover:underline">Blog</a></li>
-                    <li class="mb-2"><a href="contact.html" class="hover:underline">Contact</a></li>
-                </ul>
-            </div>
-            <!-- Social Media Links -->
-            <div class="mb-8 md:mb-0">
-                <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.896-.956-2.173-1.555-3.591-1.555-2.719 0-4.92 2.201-4.92 4.917 0 .385.045.76.128 1.122-4.088-.205-7.713-2.164-10.141-5.144-.424.728-.667 1.575-.667 2.476 0 1.709.87 3.217 2.191 4.099-.808-.026-1.569-.247-2.228-.616-.001.021-.001.042-.001.064 0 2.385 1.698 4.374 3.946 4.828-.413.111-.848.171-1.296.171-.317 0-.625-.031-.927-.087.626 1.956 2.444 3.379 4.599 3.419-1.685 1.321-3.809 2.109-6.115 2.109-.398 0-.79-.023-1.174-.068 2.179 1.396 4.767 2.21 7.548 2.21 9.057 0 14.01-7.506 14.01-14.01 0-.213-.005-.426-.014-.637.961-.695 1.797-1.562 2.457-2.549z"/></svg></a>
-                    <a href="#" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c-5.488 0-9.963 4.477-9.963 9.963 0 4.4 3.657 8.148 8.341 9.71.607.111.826-.264.826-.587 0-.29-.011-1.055-.016-2.07-3.396.737-4.113-1.63-4.113-1.63-.553-1.404-1.35-1.78-1.35-1.78-1.104-.755.084-.74.084-.74 1.22.086 1.861 1.253 1.861 1.253 1.085 1.86 2.85 1.322 3.546 1.011.11-.788.424-1.322.77-1.626-2.709-.309-5.56-1.354-5.56-6.024 0-1.331.468-2.417 1.233-3.268-.123-.309-.534-1.554.117-3.236 0 0 1.005-.322 3.293 1.246.957-.266 1.983-.398 3.003-.403 1.02.005 2.046.137 3.004.403 2.288-1.568 3.291-1.246 3.291-1.246.652 1.682.241 2.927.119 3.236.767.851 1.232 1.937 1.232 3.268 0 4.684-2.857 5.71-5.574 6.014.436.377.82 1.127.82 2.273 0 1.64-.015 2.964-.015 3.368 0 .325.218.703.834.583 4.683-1.562 8.337-5.31 8.337-9.71 0-5.486-4.475-9.963-9.963-9.963z"/></svg></a>
-                    <a href="https://x.com/HonorQr" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.947 8.305c.014.204.014.408.014.612 0 6.242-4.748 13.442-13.442 13.442-2.67 0-5.153-.779-7.237-2.127.374.045.748.075 1.133.075 2.217 0 4.26-.748 5.896-2.007-2.063-.045-3.8-1.395-4.398-3.26.287.045.564.075.861.075.418 0 .826-.06 1.212-.149-2.162-.43-3.779-2.341-3.779-4.636v-.06c.629.348 1.349.556 2.117.577-1.256-.836-2.08-2.264-2.08-3.874 0-.861.23-1.668.63-2.364 2.299 2.848 5.748 4.73 9.617 4.927-.075-.348-.119-.707-.119-1.084 0-2.598 2.112-4.71 4.71-4.71 1.361 0 2.589.577 3.448 1.494 1.084-.204 2.095-.609 3.008-1.14-.356 1.1-1.104 2.026-2.095 2.615 1-.119 1.949-.374 2.844-.749-.698 1.003-1.575 1.873-2.594 2.568z"/></svg></a>
+    <footer class="bg-gray-900 py-12 text-white">
+        <div class="mx-auto px-4 container">
+            <div class="flex md:flex-row flex-col justify-between">
+                <!-- Navigation Links -->
+                <div class="mb-8 md:mb-0">
+                    <h3 class="mb-4 font-semibold text-xl">Quick Links</h3>
+                    <ul>
+                        <li class="mb-2"><a href="about.html" class="hover:underline">About</a></li>
+                        <li class="mb-2"><a href="features.html" class="hover:underline">Features</a></li>
+                        <li class="mb-2"><a href="how-it-works.html" class="hover:underline">How It Works</a></li>
+                        <li class="mb-2"><a href="blog.html" class="hover:underline">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media Links -->
+                <div class="mb-8 md:mb-0">
+                    <h3 class="mb-4 font-semibold text-xl">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-400"><i class="fa-facebook-f fab"></i></a>
+                        <a href="#" class="hover:text-gray-400"><i class="fa-twitter fab"></i></a>
+                        <a href="#" class="hover:text-gray-400"><i class="fa-instagram fab"></i></a>
+                    </div>
+                </div>
+                <!-- Legal Links -->
+                <div class="mb-8 md:mb-0">
+                    <h3 class="mb-4 font-semibold text-xl">Legal</h3>
+                    <ul>
+                        <li class="mb-2"><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html" class="hover:underline">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <!-- Educational Resources -->
+                <div>
+                    <h3 class="mb-4 font-semibold text-xl">Educational Resources</h3>
+                    <ul>
+                        <li class="mb-2"><a href="grief-support.html" class="hover:underline">Grief Support</a></li>
+                        <li class="mb-2"><a href="coping-mechanisms.html" class="hover:underline">Coping Mechanisms</a></li>
+                        <li class="mb-2"><a href="end-of-life-planning.html" class="hover:underline">End-of-Life Planning</a></li>
+                    </ul>
                 </div>
             </div>
-            <!-- Legal Links -->
-            <div class="mb-8 md:mb-0">
-                <h3 class="text-xl font-semibold mb-4">Legal</h3>
-                <ul>
-                    <li class="mb-2"><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
-                    <li class="mb-2"><a href="Security.html" class="hover:underline">Terms of Use</a></li>
-                </ul>
-            </div>
-            <!-- Educational Resources -->
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Educational Resources</h3>
-                <ul>
-                    <li class="mb-2"><a href="grief-support.html" class="hover:underline">Grief Support</a></li>
-                    <li class="mb-2"><a href="coping-mechanisms.html" class="hover:underline">Coping Mechanisms</a></li>
-                    <li class="mb-2"><a href="end-of-life-planning.html" class="hover:underline">End-of-Life Planning</a></li>
-                </ul>
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 HonorQR. All rights reserved.</p>
             </div>
         </div>
-        <div class="text-center mt-8">
-            <p>&copy; 2024 HonorQR. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
+    </footer>
 
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -510,13 +490,30 @@
             const elements = document.querySelectorAll('.interactive-element');
             elements.forEach(el => {
                 el.addEventListener('mouseenter', () => {
-                    document.body.style.cursor = 'url(images/cursor-hover.png), pointer';
+                    document.body.style.cursor = 'url(https://source.unsplash.com/random/32x32?hover), pointer';
                 });
                 el.addEventListener('mouseleave', () => {
-                    document.body.style.cursor = 'url(images/default-cursor.png), auto';
+                    document.body.style.cursor = 'url(https://source.unsplash.com/random/32x32?default), auto';
                 });
             });
         });
+
+        let currentIndex = 0;
+
+        function moveCarousel(direction) {
+            const carouselInner = document.querySelector('.carousel-inner');
+            const totalItems = document.querySelectorAll('.carousel-item').length;
+
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = totalItems - 1;
+            } else if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            }
+
+            carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
     </script>
 </body>
 

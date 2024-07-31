@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,98 +8,98 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="public/styles.css" rel="stylesheet">
 </head>
+
 <body class="bg-gray-100 font-sans">
     <!-- Navigation Bar -->
-    <header class="bg-white border-b border-gray-200 fixed top-0 left-0 w-full z-50 shadow-md">
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-            <div class="flex items-center">
-                <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
-                <span class="text-xl font-semibold text-gray-900 ml-3">HonorQR</span>
-            </div>
-            <nav class="hidden md:flex md:ml-4">
-                <ul class="flex space-x-8">
-                    <li><a href="dashboard.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Home</a></li>
-                    <li><a href="profile.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Profile</a></li>
-                    <li><a href="privacy.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Privacy</a></li>
-                    <li><a href="notifications.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Notifications</a></li>
-                    <li><a href="billing.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Billing</a></li>
-                    <li><a href="security.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Security</a></li>
-                    <li><a href="logout.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100">Logout</a></li>
-                </ul>
-            </nav>
-            <div class="md:hidden">
-                <button class="text-gray-500 hover:bg-gray-100 p-2 rounded" id="mobile-menu-button" aria-label="Toggle Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+    <header class="top-0 left-0 z-50 fixed border-gray-200 bg-white shadow-md border-b w-full">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
+                    <span class="ml-3 font-semibold text-gray-900 text-xl">HonorQR</span>
+                </div>
+                <nav class="md:flex hidden md:ml-4">
+                    <ul class="flex space-x-8">
+                        <li><a href="dashboard.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Home</a></li>
+                        <li><a href="profile.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Profile</a></li>
+                        <li><a href="privacy.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Privacy</a></li>
+                        <li><a href="notifications.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Notifications</a></li>
+                        <li><a href="billing.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Billing</a></li>
+                        <li><a href="security.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Security</a></li>
+                        <li><a href="logout.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Logout</a></li>
+                    </ul>
+                </nav>
+                <div class="md:hidden">
+                    <button class="hover:bg-gray-100 p-2 rounded text-gray-500" id="mobile-menu-button" aria-label="Toggle Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-    <nav class="hidden md:hidden" id="mobile-menu">
-        <ul class="flex flex-col bg-gray-50 border-t border-gray-200">
-            <li><a href="dashboard.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Home</a></li>
-            <li><a href="profile.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Profile</a></li>
-            <li><a href="privacy.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Privacy</a></li>
-            <li><a href="notifications.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Notifications</a></li>
-            <li><a href="billing.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Billing</a></li>
-            <li><a href="security.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Security</a></li>
-            <li><a href="logout.html" class="px-4 py-2 text-gray-900 hover:bg-gray-100">Logout</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav class="hidden md:hidden" id="mobile-menu">
+            <ul class="flex flex-col border-gray-200 bg-gray-50 border-t">
+                <li><a href="dashboard.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Home</a></li>
+                <li><a href="profile.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Profile</a></li>
+                <li><a href="privacy.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Privacy</a></li>
+                <li><a href="notifications.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Notifications</a></li>
+                <li><a href="billing.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Billing</a></li>
+                <li><a href="security.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Security</a></li>
+                <li><a href="logout.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<script>
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
-    });
-</script>
-
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
     <!-- Main Content -->
-    <main class="container mx-auto mt-20">
-        <div class="bg-white rounded-lg shadow-lg p-8">
-            <h1 class="text-2xl font-bold mb-6">QR Locator</h1>
+    <main class="mx-auto mt-20 container">
+        <div class="bg-white shadow-lg p-8 rounded-lg">
+            <h1 class="mb-6 font-bold text-2xl">QR Locator</h1>
             <p class="mb-6 text-gray-700">Easily find and locate QR codes associated with memorials on HonorQR. Simply search by name or QR code ID, or scan a QR code.</p>
 
             <!-- Search Form -->
             <form class="mb-6">
-                <div class="flex items-center border rounded-lg p-2">
-                    <input type="text" class="w-full p-2 border-none focus:ring-0" placeholder="Enter name or QR code ID" aria-label="Search">
-                    <button type="submit" class="bg-blue-600 text-white p-2 rounded-lg">Search</button>
+                <div class="flex items-center p-2 border rounded-lg">
+                    <input type="text" class="p-2 border-none focus:ring-0 w-full" placeholder="Enter name or QR code ID" aria-label="Search">
+                    <button type="submit" class="bg-blue-600 p-2 rounded-lg text-white">Search</button>
                 </div>
             </form>
 
             <!-- Scan QR Code -->
             <div class="mb-6">
-                <button id="scan-qr-button" class="bg-green-600 text-white p-2 rounded-lg">Scan QR Code</button>
+                <button id="scan-qr-button" class="bg-green-600 p-2 rounded-lg text-white">Scan QR Code</button>
             </div>
 
             <!-- QR Code to Memorial -->
             <div class="mb-6">
-                <h2 class="text-xl font-bold mb-4">QR Code to Memorial</h2>
-                <div class="flex items-center border rounded-lg p-2">
-                    <input type="text" class="w-full p-2 border-none focus:ring-0" placeholder="Enter QR code ID" aria-label="Enter QR code ID">
-                    <button type="submit" class="bg-blue-600 text-white p-2 rounded-lg">Link to Memorial</button>
+                <h2 class="mb-4 font-bold text-xl">QR Code to Memorial</h2>
+                <div class="flex items-center p-2 border rounded-lg">
+                    <input type="text" class="p-2 border-none focus:ring-0 w-full" placeholder="Enter QR code ID" aria-label="Enter QR code ID">
+                    <button type="submit" class="bg-blue-600 p-2 rounded-lg text-white">Link to Memorial</button>
                 </div>
             </div>
 
             <!-- Gravesite Locator -->
             <div class="mb-6">
-                <h2 class="text-xl font-bold mb-4">Gravesite Locator</h2>
-                <div class="flex items-center border rounded-lg p-2">
-                    <input type="text" class="w-full p-2 border-none focus:ring-0" placeholder="Enter gravesite ID or name" aria-label="Enter gravesite ID or name">
-                    <button type="submit" class="bg-blue-600 text-white p-2 rounded-lg">Locate Gravesite</button>
+                <h2 class="mb-4 font-bold text-xl">Gravesite Locator</h2>
+                <div class="flex items-center p-2 border rounded-lg">
+                    <input type="text" class="p-2 border-none focus:ring-0 w-full" placeholder="Enter gravesite ID or name" aria-label="Enter gravesite ID or name">
+                    <button type="submit" class="bg-blue-600 p-2 rounded-lg text-white">Locate Gravesite</button>
                 </div>
             </div>
 
             <!-- Results Section -->
             <div id="results" class="space-y-4">
                 <!-- Example Result -->
-                <div class="p-4 border rounded-lg bg-gray-50">
-                    <h2 class="text-lg font-semibold">John Doe</h2>
+                <div class="bg-gray-50 p-4 border rounded-lg">
+                    <h2 class="font-semibold text-lg">John Doe</h2>
                     <p class="text-gray-600">QR Code ID: 123456</p>
                     <a href="#" class="text-blue-500">View Memorial</a>
                 </div>
@@ -108,10 +109,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto text-center">
-            <span class="text-sm font-bold">&copy; 2024 HonorQR. All rights reserved.</span>
-            <div class="mt-4 space-x-4">
+    <footer class="bg-gray-900 py-8 text-white">
+        <div class="mx-auto text-center container">
+            <span class="font-bold text-sm">&copy; 2024 HonorQR. All rights reserved.</span>
+            <div class="space-x-4 mt-4">
                 <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
                 <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
                 <a href="#" class="text-gray-400 hover:text-white">Contact</a>
@@ -120,7 +121,7 @@
     </footer>
 
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -131,4 +132,5 @@
         });
     </script>
 </body>
+
 </html>

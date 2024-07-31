@@ -8,22 +8,21 @@
     <meta name="description" content="Explore the powerful features of HonorQR and learn how it works to preserve memories forever.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="public/styles.css" rel="stylesheet">
     <style>
         /* Custom cursor styles */
         body {
-            cursor: url('images/default-cursor.png'), auto;
+            cursor: url('https://source.unsplash.com/random/32x32?cursor'), auto;
         }
         .btn-primary {
-            cursor: url('images/cursor-pointer.png'), pointer;
+            cursor: url('https://source.unsplash.com/random/32x32?pointer'), pointer;
         }
         .interactive-element:hover {
-            cursor: url('images/cursor-hover.png'), pointer;
+            cursor: url('https://source.unsplash.com/random/32x32?hover'), pointer;
         }
 
         /* Hero background */
         .hero-bg {
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('IMAGES/Photoleap_27_06_2024_00_17_59_csAgd.jpg');
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('https://source.unsplash.com/random/1920x1080?hero');
             background-size: cover;
             background-position: center center;
         }
@@ -109,28 +108,28 @@
 
 <body class="bg-gray-100">
     <!-- Navigation -->
-    <nav class="nav-bg fixed top-0 left-0 w-full z-50 shadow-md">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+    <nav class="top-0 left-0 z-50 fixed shadow-md w-full nav-bg">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
+            <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center space-x-3">
-                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
-                        <span class="text-xl font-semibold text-white">HonorQR</span>
+                        <img src="https://source.unsplash.com/random/40x40?logo" class="h-10" alt="HonorQR Logo">
+                        <span class="font-semibold text-white text-xl">HonorQR</span>
                     </a>
                 </div>
-                <div class="hidden md:flex md:ml-4">
+                <div class="md:flex hidden md:ml-4">
                     <ul class="flex space-x-8">
-                        <li><a href="index.html" class="nav-link px-3 py-2 rounded">Home</a></li>
-                        <li><a href="about.html" class="nav-link px-3 py-2 rounded">About</a></li>
-                        <li><a href="features.html" class="nav-link px-3 py-2 rounded">Features</a></li>
-                        <li><a href="prices.html" class="nav-link px-3 py-2 rounded">Prices</a></li>
-                        <li><a href="faq.html" class="nav-link px-3 py-2 rounded">FAQ</a></li>
-                        <li><a href="contact.html" class="nav-link px-3 py-2 rounded">Contact</a></li>
-                        <li><a href="login.html" class="nav-link px-3 py-2 rounded">Login</a></li>
+                        <li><a href="index.html" class="px-3 py-2 rounded nav-link">Home</a></li>
+                        <li><a href="about.html" class="px-3 py-2 rounded nav-link">About</a></li>
+                        <li><a href="features.html" class="px-3 py-2 rounded nav-link">Features</a></li>
+                        <li><a href="prices.html" class="px-3 py-2 rounded nav-link">Prices</a></li>
+                        <li><a href="faq.html" class="px-3 py-2 rounded nav-link">FAQ</a></li>
+                        <li><a href="contact.html" class="px-3 py-2 rounded nav-link">Contact</a></li>
+                        <li><a href="login.html" class="px-3 py-2 rounded nav-link">Login</a></li>
                     </ul>
                 </div>
                 <div class="md:hidden">
-                    <button id="hamburger-button" class="inline-flex items-center justify-center p-2 text-white rounded-lg hover:bg-gray-700">
+                    <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -140,33 +139,33 @@
             </div>
         </div>
         <div class="hidden md:hidden" id="mobile-menu">
-            <ul class="flex flex-col mt-2 space-y-2 bg-gray-700">
-                <li><a href="index.html" class="nav-link block px-4 py-2 rounded">Home</a></li>
-                <li><a href="about.html" class="nav-link block px-4 py-2 rounded">About</a></li>
-                <li><a href="features.html" class="nav-link block px-4 py-2 rounded">Features</a></li>
-                <li><a href="prices.html" class="nav-link block px-4 py-2 rounded">Prices</a></li>
-                <li><a href="faq.html" class="nav-link block px-4 py-2 rounded">FAQ</a></li>
-                <li><a href="contact.html" class="nav-link block px-4 py-2 rounded">Contact</a></li>
-                <li><a href="login.html" class="nav-link block px-4 py-2 rounded">Login</a></li>
+            <ul class="flex flex-col space-y-2 bg-gray-700 mt-2">
+                <li><a href="index.html" class="block px-4 py-2 rounded nav-link">Home</a></li>
+                <li><a href="about.html" class="block px-4 py-2 rounded nav-link">About</a></li>
+                <li><a href="features.html" class="block px-4 py-2 rounded nav-link">Features</a></li>
+                <li><a href="prices.html" class="block px-4 py-2 rounded nav-link">Prices</a></li>
+                <li><a href="faq.html" class="block px-4 py-2 rounded nav-link">FAQ</a></li>
+                <li><a href="contact.html" class="block px-4 py-2 rounded nav-link">Contact</a></li>
+                <li><a href="login.html" class="block px-4 py-2 rounded nav-link">Login</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg bg-cover bg-center h-screen flex items-center justify-center">
-        <div class="container mx-auto text-center text-white px-4">
-            <h1 class="text-6xl font-serif mb-4 fade-in">Features of HonorQR</h1>
-            <p class="text-2xl font-sans mb-8 fade-in" data-aos="fade-up">Discover the powerful features and learn how it works.</p>
+    <section class="flex justify-center items-center bg-cover bg-center h-screen hero-bg">
+        <div class="mx-auto px-4 text-center text-white container">
+            <h1 class="mb-4 font-serif text-6xl fade-in">Features of HonorQR</h1>
+            <p class="mb-8 font-sans text-2xl fade-in" data-aos="fade-up">Discover the powerful features and learn how it works.</p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 fade-in">Our Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="features" class="bg-white py-16">
+        <div class="mx-auto px-4 text-center container">
+            <h2 class="mb-12 font-bold text-4xl text-gray-900 fade-in">Our Features</h2>
+            <div class="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <div class="card">
-                    <img src="IMAGES/DALL·E 2024-07-30 10.51.45 - A serene and modern visual representation of 'Create an Account' and 'Login' steps for HonorQR. The image features a clean and minimalist design with .webp" alt="Feature 1" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/400x300?profile" alt="Feature 1" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Digital Memorials</span>
                         <span class="card_subtitle">Create personalized digital memorials</span>
@@ -174,7 +173,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="IMAGES/DALL·E 2024-07-30 10.52.32 - A detailed visual representation of 'Create a Memorial Profile' for HonorQR. The image features a computer screen displaying the process of filling in.webp" alt="Feature 2" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/400x300?tribute" alt="Feature 2" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Interactive Tribute Wall</span>
                         <span class="card_subtitle">Engage with a community</span>
@@ -182,7 +181,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="IMAGES/IMG-20240711-WA0000.jpg" alt="Feature 3" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/400x300?qrcode" alt="Feature 3" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">QR Code Integration</span>
                         <span class="card_subtitle">Seamlessly link physical and digital</span>
@@ -190,7 +189,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="IMAGES/DALL·E 2024-07-30 11.01.25 - A detailed visual representation of 'Audio Memories' for HonorQR. The image features a computer screen displaying an interface for uploading and playi.webp" alt="Feature 4" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/400x300?audio" alt="Feature 4" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Audio Memories</span>
                         <span class="card_subtitle">Preserve voices and stories</span>
@@ -198,7 +197,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="IMAGES/DALL·E 2024-07-30 11.00.51 - A detailed visual representation of 'Audio Memories' for HonorQR. The image features a computer screen displaying the interface for uploading and play.webp" alt="Feature 5" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/400x300?multilingual" alt="Feature 5" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Multilingual Support</span>
                         <span class="card_subtitle">Accessibility for a global audience</span>
@@ -206,82 +205,88 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="IMAGES/DALL·E 2024-07-30 11.00.13 - A detailed visual representation of 'Use the Mobile App' for HonorQR. The image features a smartphone screen displaying the HonorQR mobile app interfa.webp" alt="Feature 6" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/400x300?mobile" alt="Feature 6" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Mobile App</span>
                         <span class="card_subtitle">Access memorials on-the-go</span>
                         <p class="card_description">Stay connected anytime, anywhere with our user-friendly mobile app.</p>
                     </div>
                 </div>
-              <div class="card"> <img src="IMAGES/DALL·E 2024-07-30 10.55.12 - A detailed visual representation of 'Interactive Tribute Wall' for HonorQR. The image features a computer screen displaying the interactive tribute wa.webp" alt="Feature 6" class="w-full h-full object-cover rounded-lg">
-                  <div class="card_content"> <span class="card_title">Mobile App</span> <span class="card_subtitle">Access memorials on-the-go</span>
-                    <p class="card_description">Stay connected anytime, anywhere with our user-friendly mobile app.</p>
-                  </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/400x300?grief" alt="Feature 7" class="rounded-lg w-full h-full object-cover">
+                    <div class="card_content">
+                        <span class="card_title">Grief Support</span>
+                        <span class="card_subtitle">Access resources and support</span>
+                        <p class="card_description">Find valuable resources and support to help you through your grief journey.</p>
+                    </div>
                 </div>
-              <div class="card"> <img src="IMAGES/DALL·E 2024-07-30 10.58.30 - A detailed visual representation of 'Access Grief Support Resources' for HonorQR. The image features a computer screen displaying a grief support page.webp" alt="Feature 6" class="w-full h-full object-cover rounded-lg">
-                  <div class="card_content"> <span class="card_title">Mobile App</span> <span class="card_subtitle">Access memorials on-the-go</span>
-                    <p class="card_description">Stay connected anytime, anywhere with our user-friendly mobile app.</p>
-                  </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/400x300?livestream" alt="Feature 8" class="rounded-lg w-full h-full object-cover">
+                    <div class="card_content">
+                        <span class="card_title">Livestream Services</span>
+                        <span class="card_subtitle">Connect with loved ones remotely</span>
+                        <p class="card_description">Livestream memorial services to allow remote participation.</p>
+                    </div>
                 </div>
-                <div class="card"> <img src="IMAGES/DALL·E 2024-07-30 10.55.47 - A detailed visual representation of 'Livestreaming Funeral Services' for HonorQR. The image features a computer screen displaying a livestream of a me.webp" alt="Feature 6" class="w-full h-full object-cover rounded-lg">
-                  <div class="card_content"> <span class="card_title">Mobile App</span> <span class="card_subtitle">Access memorials on-the-go</span>
-                    <p class="card_description">Stay connected anytime, anywhere with our user-friendly mobile app.</p>
-                  </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/400x300?planning" alt="Feature 9" class="rounded-lg w-full h-full object-cover">
+                    <div class="card_content">
+                        <span class="card_title">End-of-Life Planning</span>
+                        <span class="card_subtitle">Prepare for the future</span>
+                        <p class="card_description">Plan ahead with resources and tools for end-of-life arrangements.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    
-
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between">
-            <!-- Navigation Links -->
-            <div class="mb-8 md:mb-0">
-                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-                <ul>
-                    <li class="mb-2"><a href="about.html" class="hover:underline">About</a></li>
-                    <li class="mb-2"><a href="features.html" class="hover:underline">Features</a></li>
-                    <li class="mb-2"><a href="how-it-works.html" class="hover:underline">How It Works</a></li>
-                    <li class="mb-2"><a href="blog.html" class="hover:underline">Blog</a></li>
-                    <li class="mb-2"><a href="contact.html" class="hover:underline">Contact</a></li>
-                </ul>
-            </div>
-            <!-- Social Media Links -->
-            <div class="mb-8 md:mb-0">
-                <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.896-.956-2.173-1.555-3.591-1.555-2.719 0-4.92 2.201-4.92 4.917 0 .385.045.76.128 1.122-4.088-.205-7.713-2.164-10.141-5.144-.424.728-.667 1.575-.667 2.476 0 1.709.87 3.217 2.191 4.099-.808-.026-1.569-.247-2.228-.616-.001.021-.001.042-.001.064 0 2.385 1.698 4.374 3.946 4.828-.413.111-.848.171-1.296.171-.317 0-.625-.031-.927-.087.626 1.956 2.444 3.379 4.599 3.419-1.685 1.321-3.809 2.109-6.115 2.109-.398 0-.79-.023-1.174-.068 2.179 1.396 4.767 2.21 7.548 2.21 9.057 0 14.01-7.506 14.01-14.01 0-.213-.005-.426-.014-.637.961-.695 1.797-1.562 2.457-2.549z"/></svg></a>
-                    <a href="#" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c-5.488 0-9.963 4.477-9.963 9.963 0 4.4 3.657 8.148 8.341 9.71.607.111.826-.264.826-.587 0-.29-.011-1.055-.016-2.07-3.396.737-4.113-1.63-4.113-1.63-.553-1.404-1.35-1.78-1.35-1.78-1.104-.755.084-.74.084-.74 1.22.086 1.861 1.253 1.861 1.253 1.085 1.86 2.85 1.322 3.546 1.011.11-.788.424-1.322.77-1.626-2.709-.309-5.56-1.354-5.56-6.024 0-1.331.468-2.417 1.233-3.268-.123-.309-.534-1.554.117-3.236 0 0 1.005-.322 3.293 1.246.957-.266 1.983-.398 3.003-.403 1.02.005 2.046.137 3.004.403 2.288-1.568 3.291-1.246 3.291-1.246.652 1.682.241 2.927.119 3.236.767.851 1.232 1.937 1.232 3.268 0 4.684-2.857 5.71-5.574 6.014.436.377.82 1.127.82 2.273 0 1.64-.015 2.964-.015 3.368 0 .325.218.703.834.583 4.683-1.562 8.337-5.31 8.337-9.71 0-5.486-4.475-9.963-9.963-9.963z"/></svg></a>
-                    <a href="https://x.com/HonorQr" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.947 8.305c.014.204.014.408.014.612 0 6.242-4.748 13.442-13.442 13.442-2.67 0-5.153-.779-7.237-2.127.374.045.748.075 1.133.075 2.217 0 4.26-.748 5.896-2.007-2.063-.045-3.8-1.395-4.398-3.26.287.045.564.075.861.075.418 0 .826-.06 1.212-.149-2.162-.43-3.779-2.341-3.779-4.636v-.06c.629.348 1.349.556 2.117.577-1.256-.836-2.08-2.264-2.08-3.874 0-.861.23-1.668.63-2.364 2.299 2.848 5.748 4.73 9.617 4.927-.075-.348-.119-.707-.119-1.084 0-2.598 2.112-4.71 4.71-4.71 1.361 0 2.589.577 3.448 1.494 1.084-.204 2.095-.609 3.008-1.14-.356 1.1-1.104 2.026-2.095 2.615 1-.119 1.949-.374 2.844-.749-.698 1.003-1.575 1.873-2.594 2.568z"/></svg></a>
+    <footer class="bg-gray-900 py-12 text-white">
+        <div class="mx-auto px-4 container">
+            <div class="flex md:flex-row flex-col justify-between">
+                <!-- Navigation Links -->
+                <div class="mb-8 md:mb-0">
+                    <h3 class="mb-4 font-semibold text-xl">Quick Links</h3>
+                    <ul>
+                        <li class="mb-2"><a href="about.html" class="hover:underline">About</a></li>
+                        <li class="mb-2"><a href="features.html" class="hover:underline">Features</a></li>
+                        <li class="mb-2"><a href="how-it-works.html" class="hover:underline">How It Works</a></li>
+                        <li class="mb-2"><a href="blog.html" class="hover:underline">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media Links -->
+                <div class="mb-8 md:mb-0">
+                    <h3 class="mb-4 font-semibold text-xl">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.896-.956-2.173-1.555-3.591-1.555-2.719 0-4.92 2.201-4.92 4.917 0 .385.045.76.128 1.122-4.088-.205-7.713-2.164-10.141-5.144-.424.728-.667 1.575-.667 2.476 0 1.709.87 3.217 2.191 4.099-.808-.026-1.569-.247-2.228-.616-.001.021-.001.042-.001.064 0 2.385 1.698 4.374 3.946 4.828-.413.111-.848.171-1.296.171-.317 0-.625-.031-.927-.087.626 1.956 2.444 3.379 4.599 3.419-1.685 1.321-3.809 2.109-6.115 2.109-.398 0-.79-.023-1.174-.068 2.179 1.396 4.767 2.21 7.548 2.21 9.057 0 14.01-7.506 14.01-14.01 0-.213-.005-.426-.014-.637.961-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+                        <a href="#" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c-5.488 0-9.963 4.477-9.963 9.963 0 4.4 3.657 8.148 8.341 9.71.607.111.826-.264.826-.587 0-.29-.011-1.055-.016-2.07-3.396.737-4.113-1.63-4.113-1.63-.553-1.404-1.35-1.78-1.35-1.78-1.104-.755.084-.74.084-.74 1.22.086 1.861 1.253 1.861 1.253 1.085 1.86 2.85 1.322 3.546 1.011.11-.788.424-1.322.77-1.626-2.709-.309-5.56-1.354-5.56-6.024 0-1.331.468-2.417 1.233-3.268-.123-.309-.534-1.554.117-3.236 0 0 1.005-.322 3.293 1.246.957-.266 1.983-.398 3.003-.403 1.02.005 2.046.137 3.004.403 2.288-1.568 3.291-1.246 3.291-1.246.652 1.682.241 2.927.119 3.236.767.851 1.232 1.937 1.232 3.268 0 4.684-2.857 5.71-5.574 6.014.436.377.82 1.127.82 2.273 0 1.64-.015 2.964-.015 3.368 0 .325.218.703.834.583 4.683-1.562 8.337-5.31 8.337-9.71 0-5.486-4.475-9.963-9.963-9.963z"/></svg></a>
+                        <a href="https://x.com/HonorQr" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.947 8.305c.014.204.014.408.014.612 0 6.242-4.748 13.442-13.442 13.442-2.67 0-5.153-.779-7.237-2.127.374.045.748.075 1.133.075 2.217 0 4.26-.748 5.896-2.007-2.063-.045-3.8-1.395-4.398-3.26.287.045.564.075.861.075.418 0 .826-.06 1.212-.149-2.162-.43-3.779-2.341-3.779-4.636v-.06c.629.348 1.349.556 2.117.577-1.256-.836-2.08-2.264-2.08-3.874 0-.861.23-1.668.63-2.364 2.299 2.848 5.748 4.73 9.617 4.927-.075-.348-.119-.707-.119-1.084 0-2.598 2.112-4.71 4.71-4.71 1.361 0 2.589.577 3.448 1.494 1.084-.204 2.095-.609 3.008-1.14-.356 1.1-1.104 2.026-2.095 2.615 1-.119 1.949-.374 2.844-.749-.698 1.003-1.575 1.873-2.594 2.568z"/></svg></a>
+                    </div>
+                </div>
+                <!-- Legal Links -->
+                <div class="mb-8 md:mb-0">
+                    <h3 class="mb-4 font-semibold text-xl">Legal</h3>
+                    <ul>
+                        <li class="mb-2"><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html" class="hover:underline">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <!-- Educational Resources -->
+                <div>
+                    <h3 class="mb-4 font-semibold text-xl">Educational Resources</h3>
+                    <ul>
+                        <li class="mb-2"><a href="grief-support.html" class="hover:underline">Grief Support</a></li>
+                        <li class="mb-2"><a href="coping-mechanisms.html" class="hover:underline">Coping Mechanisms</a></li>
+                        <li class="mb-2"><a href="end-of-life-planning.html" class="hover:underline">End-of-Life Planning</a></li>
+                    </ul>
                 </div>
             </div>
-            <!-- Legal Links -->
-            <div class="mb-8 md:mb-0">
-                <h3 class="text-xl font-semibold mb-4">Legal</h3>
-                <ul>
-                    <li class="mb-2"><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
-                    <li class="mb-2"><a href="Security.html" class="hover:underline">Terms of Use</a></li>
-                </ul>
-            </div>
-            <!-- Educational Resources -->
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Educational Resources</h3>
-                <ul>
-                    <li class="mb-2"><a href="grief-support.html" class="hover:underline">Grief Support</a></li>
-                    <li class="mb-2"><a href="coping-mechanisms.html" class="hover:underline">Coping Mechanisms</a></li>
-                    <li class="mb-2"><a href="end-of-life-planning.html" class="hover:underline">End-of-Life Planning</a></li>
-                </ul>
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 HonorQR. All rights reserved.</p>
             </div>
         </div>
-        <div class="text-center mt-8">
-            <p>&copy; 2024 HonorQR. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
