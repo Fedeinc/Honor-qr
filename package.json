@@ -7,6 +7,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.7",
-    "serve": "^14.0.1"  // Add serve as a dev dependency
+    "serve": "^14.0.1"
   }
 }
