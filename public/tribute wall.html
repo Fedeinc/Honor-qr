@@ -11,45 +11,54 @@
 
 <body class="bg-gray-100 font-sans">
     <!-- Navigation Bar -->
-    <header class="top-0 left-0 z-50 fixed border-gray-200 bg-white shadow-md border-b w-full">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
-                    <span class="ml-3 font-semibold text-gray-900 text-xl">HonorQR</span>
-                </div>
-                <nav class="md:flex hidden md:ml-4">
-                    <ul class="flex space-x-8">
-                        <li><a href="dashboard.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Home</a></li>
-                        <li><a href="profile.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Profile</a></li>
-                        <li><a href="privacy.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Privacy</a></li>
-                        <li><a href="notifications.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Notifications</a></li>
-                        <li><a href="billing.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Billing</a></li>
-                        <li><a href="security.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Security</a></li>
-                        <li><a href="logout.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Logout</a></li>
-                    </ul>
-                </nav>
-                <div class="md:hidden">
-                    <button class="hover:bg-gray-100 p-2 rounded text-gray-500" id="mobile-menu-button" aria-label="Toggle Menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+    <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <a href="dashboard.html" class="flex items-center space-x-3">
+                    <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
+                    <span class="font-semibold text-white text-xl">HonorQR</span>
+                </a>
+            </div>
+            <div class="md:flex hidden md:ml-4">
+                <ul class="flex space-x-8">
+                    <li><a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
+                    <li><a href="tribute wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a></li>
+                    <li><a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
+                    <li><a href="qr locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Locator</a></li>
+                    <li><a href="qr share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
+                    <li><a href="remembrance.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
+                    <li><a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
+                    <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                    <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                    <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+                </ul>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-        <nav class="hidden md:hidden" id="mobile-menu">
-            <ul class="flex flex-col border-gray-200 bg-gray-50 border-t">
-                <li><a href="dashboard.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Home</a></li>
-                <li><a href="profile.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Profile</a></li>
-                <li><a href="privacy.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Privacy</a></li>
-                <li><a href="notifications.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Notifications</a></li>
-                <li><a href="billing.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Billing</a></li>
-                <li><a href="security.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Security</a></li>
-                <li><a href="logout.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+    <div class="hidden md:hidden" id="mobile-menu">
+        <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
+            <li><a href="profile.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
+            <li><a href="tribute wall.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
+            <li><a href="gallery.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
+            <li><a href="qr locator.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">QR Locator</a></li>
+            <li><a href="qr share.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Share QR</a></li>
+            <li><a href="remembrance.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
+            <li><a href="chatbot.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
+            <li><a href="faq.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+            <li><a href="login.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+            <li><a href="logout.html" class="block px-4 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+        </ul>
+    </div>
+</nav>
 
     <script>
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
