@@ -22,9 +22,12 @@
 
         /* Hero background */
         .hero-bg {
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('https://source.unsplash.com/random/1920x1080?hero');
-            background-size: cover;
-            background-position: center center;
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.50) 0%,rgba(0,0,0,0.50) 100%), url(IMAGES/hero.webp);
+    background-image: -moz-linear-gradient(270deg,rgba(0,0,0,0.50) 0%,rgba(0,0,0,0.50) 100%), url(IMAGES/hero.webp);
+    background-image: -o-linear-gradient(270deg,rgba(0,0,0,0.50) 0%,rgba(0,0,0,0.50) 100%), url(IMAGES/hero.webp);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(IMAGES/hero.webp);
+    background-size: cover;
+    background-position: center bottom;
         }
 
         /* Primary button styles */
@@ -108,24 +111,24 @@
 
 <body class="bg-gray-100">
     <!-- Navigation -->
-    <nav class="top-0 left-0 z-50 fixed shadow-md w-full nav-bg">
+    <nav class="top-0 left-0 z-50 fixed bg-gray-800 shadow-md w-full">
         <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center space-x-3">
-                        <img src="https://source.unsplash.com/random/40x40?logo" class="h-10" alt="HonorQR Logo">
+                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
                         <span class="font-semibold text-white text-xl">HonorQR</span>
                     </a>
                 </div>
                 <div class="md:flex hidden md:ml-4">
                     <ul class="flex space-x-8">
-                        <li><a href="index.html" class="px-3 py-2 rounded nav-link">Home</a></li>
-                        <li><a href="about.html" class="px-3 py-2 rounded nav-link">About</a></li>
-                        <li><a href="features.html" class="px-3 py-2 rounded nav-link">Features</a></li>
-                        <li><a href="prices.html" class="px-3 py-2 rounded nav-link">Prices</a></li>
-                        <li><a href="faq.html" class="px-3 py-2 rounded nav-link">FAQ</a></li>
-                        <li><a href="contact.html" class="px-3 py-2 rounded nav-link">Contact</a></li>
-                        <li><a href="login.html" class="px-3 py-2 rounded nav-link">Login</a></li>
+                        <li><a href="index.html" class="px-3 py-2 rounded text-white">Home</a></li>
+                        <li><a href="about.html" class="px-3 py-2 rounded text-white">About</a></li>
+                        <li><a href="features.html" class="px-3 py-2 rounded text-white">Features</a></li>
+                        <li><a href="prices.html" class="px-3 py-2 rounded text-white">Prices</a></li>
+                        <li><a href="faq.html" class="px-3 py-2 rounded text-white">FAQ</a></li>
+                        <li><a href="contact.html" class="px-3 py-2 rounded text-white">Contact</a></li>
+                        <li><a href="login.html" class="px-3 py-2 rounded text-white">Login</a></li>
                     </ul>
                 </div>
                 <div class="md:hidden">
@@ -140,13 +143,13 @@
         </div>
         <div class="hidden md:hidden" id="mobile-menu">
             <ul class="flex flex-col space-y-2 bg-gray-700 mt-2">
-                <li><a href="index.html" class="block px-4 py-2 rounded nav-link">Home</a></li>
-                <li><a href="about.html" class="block px-4 py-2 rounded nav-link">About</a></li>
-                <li><a href="features.html" class="block px-4 py-2 rounded nav-link">Features</a></li>
-                <li><a href="prices.html" class="block px-4 py-2 rounded nav-link">Prices</a></li>
-                <li><a href="faq.html" class="block px-4 py-2 rounded nav-link">FAQ</a></li>
-                <li><a href="contact.html" class="block px-4 py-2 rounded nav-link">Contact</a></li>
-                <li><a href="login.html" class="block px-4 py-2 rounded nav-link">Login</a></li>
+                <li><a href="index.html" class="block px-4 py-2 rounded text-white">Home</a></li>
+                <li><a href="about.html" class="block px-4 py-2 rounded text-white">About</a></li>
+                <li><a href="features.html" class="block px-4 py-2 rounded text-white">Features</a></li>
+                <li><a href="prices.html" class="block px-4 py-2 rounded text-white">Prices</a></li>
+                <li><a href="faq.html" class="block px-4 py-2 rounded text-white">FAQ</a></li>
+                <li><a href="contact.html" class="block px-4 py-2 rounded text-white">Contact</a></li>
+                <li><a href="login.html" class="block px-4 py-2 rounded text-white">Login</a></li>
             </ul>
         </div>
     </nav>
@@ -165,7 +168,7 @@
             <h2 class="mb-12 font-bold text-4xl text-gray-900 fade-in">Our Features</h2>
             <div class="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <div class="card">
-                    <img src="https://source.unsplash.com/random/400x300?profile" alt="Feature 1" class="rounded-lg w-full h-full object-cover">
+                    <img src="IMAGES/Photoleap_27_06_2024_00_28_34_EX0co.jpg" alt="Feature 1" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Digital Memorials</span>
                         <span class="card_subtitle">Create personalized digital memorials</span>
@@ -173,7 +176,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/random/400x300?tribute" alt="Feature 2" class="rounded-lg w-full h-full object-cover">
+                    <img src="IMAGES/feature 3.jpg" alt="Feature 2" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Interactive Tribute Wall</span>
                         <span class="card_subtitle">Engage with a community</span>
@@ -181,7 +184,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/random/400x300?qrcode" alt="Feature 3" class="rounded-lg w-full h-full object-cover">
+                    <img src="IMAGES/IMG-20240618-WA0047.jpg" alt="Feature 3" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">QR Code Integration</span>
                         <span class="card_subtitle">Seamlessly link physical and digital</span>
@@ -189,7 +192,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/random/400x300?audio" alt="Feature 4" class="rounded-lg w-full h-full object-cover">
+                    <img src="IMAGES/Photoleap_27_06_2024_00_24_54_MOFQY.jpg" alt="Feature 4" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Audio Memories</span>
                         <span class="card_subtitle">Preserve voices and stories</span>
@@ -197,7 +200,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/random/400x300?multilingual" alt="Feature 5" class="rounded-lg w-full h-full object-cover">
+                    <img src="IMAGES/IMG-20240618-WA0038.jpg" alt="Feature 5" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Multilingual Support</span>
                         <span class="card_subtitle">Accessibility for a global audience</span>
@@ -205,7 +208,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/random/400x300?mobile" alt="Feature 6" class="rounded-lg w-full h-full object-cover">
+                    <img src="IMAGES/logo.jpg" alt="Feature 6" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Mobile App</span>
                         <span class="card_subtitle">Access memorials on-the-go</span>
@@ -213,7 +216,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/random/400x300?grief" alt="Feature 7" class="rounded-lg w-full h-full object-cover">
+                    <img src="IMAGES/Photoleap_30_07_2024_18_47_36_ko5Rm.jpg" alt="Feature 7" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Grief Support</span>
                         <span class="card_subtitle">Access resources and support</span>
@@ -221,7 +224,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/random/400x300?livestream" alt="Feature 8" class="rounded-lg w-full h-full object-cover">
+                    <img src="IMAGES/IMG-20240618-WA0044.jpg" alt="Feature 8" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">Livestream Services</span>
                         <span class="card_subtitle">Connect with loved ones remotely</span>
@@ -229,7 +232,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/random/400x300?planning" alt="Feature 9" class="rounded-lg w-full h-full object-cover">
+                    <img src="IMAGES/Photoleap_30_07_2024_18_46_34_TQ93l.jpg" alt="Feature 9" class="rounded-lg w-full h-full object-cover">
                     <div class="card_content">
                         <span class="card_title">End-of-Life Planning</span>
                         <span class="card_subtitle">Prepare for the future</span>

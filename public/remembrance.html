@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remembrance Calendar - HonorQR</title>
+    <title>Share QR Code - HonorQR</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
     <link href="public/styles.css" rel="stylesheet">
+    <style>
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1rem;
+        }
+        .calendar div {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+        }
+        .calendar div.active {
+            background: #2563eb;
+            color: white;
+        }
+    </style>
 </head>
+
 <body class="bg-gray-100 font-sans">
     <!-- Navigation Bar -->
     <header class="top-0 left-0 z-50 fixed border-gray-200 bg-white shadow-md border-b w-full">
@@ -59,30 +77,99 @@
     </script>
 
     <!-- Main Content -->
-    <main class="mx-auto mt-20 p-4 container">
-        <h1 class="mb-4 font-semibold text-3xl text-gray-900">Remembrance Calendar</h1>
-        <div class="bg-white shadow-lg p-6 rounded-lg">
-            <h2 class="mb-4 font-semibold text-2xl text-gray-800">Upcoming Dates</h2>
-            <div id="calendar" class="mb-6 flatpickr"></div>
-            <h2 class="mb-4 font-semibold text-2xl text-gray-800">Lifetime Achievements</h2>
-            <ul id="achievements-list" class="space-y-4">
-                <!-- Example Achievement -->
-                <!-- These will be dynamically populated -->
-            </ul>
-        </div>
-        <div class="bg-white shadow-lg mt-6 p-6 rounded-lg">
-            <h2 class="mb-4 font-semibold text-2xl text-gray-800">Add a Remembrance Date</h2>
-            <form id="remembrance-form">
-                <div class="mb-4">
-                    <label for="title" class="block text-gray-700">Title</label>
-                    <input type="text" id="title" name="title" class="p-2 border rounded-lg w-full" placeholder="e.g., Birthday, Anniversary">
+    <main class="mx-auto mt-20 container">
+        <div class="bg-white shadow-lg p-8 rounded-lg">
+            <h1 class="mb-6 font-bold text-2xl text-gray-900">Share QR Code</h1>
+
+            <!-- QR Code Image -->
+            <div class="flex justify-center mb-6">
+                <img src="IMAGES/IMG-20240711-WA0000.jpg" alt="QR Code" class="w-48 h-48">
+            </div>
+
+            <!-- QR Code Information -->
+            <div class="mb-6">
+                <p class="text-gray-700 text-lg">Scan this QR code to access the memorial page of John Doe. You can share this QR code with friends and family to allow them to visit the online memorial and leave their tributes.</p>
+            </div>
+
+            <!-- Calendar Format -->
+            <div class="calendar mb-6">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+                <div>13</div>
+                <div>14</div>
+                <div>15</div>
+                <div>16</div>
+                <div>17</div>
+                <div>18</div>
+                <div class="active">19</div>
+                <div>20</div>
+                <div>21</div>
+                <div>22</div>
+                <div>23</div>
+                <div>24</div>
+                <div>25</div>
+                <div>26</div>
+                <div>27</div>
+                <div>28</div>
+                <div>29</div>
+                <div>30</div>
+                <div>31</div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Share Options -->
+            <div class="mb-6">
+                <h2 class="mb-4 font-semibold text-gray-900 text-xl">Share this QR Code</h2>
+                <div class="flex space-x-4">
+                    <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white transition duration-300">Share on Facebook</button>
+                    <button class="bg-blue-400 hover:bg-blue-500 px-4 py-2 rounded text-white transition duration-300">Share on Twitter</button>
+                    <button class="bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded text-white transition duration-300">Share on Instagram</button>
+                    <button class="bg-gray-500 hover:bg-gray-600 px-4 py-2 rounded text-white transition duration-300">Copy Link</button>
+                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20memorial%20page%20of%20John%20Doe%20https%3A%2F%2Fwww.honorqr.com%2Fmemorial%2F123456" target="_blank" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded text-white transition duration-300">Share on WhatsApp</a>
                 </div>
-                <div class="mb-4">
-                    <label for="date" class="block text-gray-700">Date</label>
-                    <input type="text" id="date" name="date" class="p-2 border rounded-lg w-full flatpickr">
+            </div>
+
+            <!-- Email Sharing -->
+            <div class="mb-6">
+                <h2 class="mb-4 font-semibold text-gray-900 text-xl">Share via Email</h2>
+                <form>
+                    <div class="flex flex-col mb-4">
+                        <label for="email" class="mb-2 text-gray-700">Recipient's Email:</label>
+                        <input type="email" id="email" name="email" class="p-2 border rounded-lg" placeholder="Enter recipient's email">
+                    </div>
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded text-white transition duration-300">Send Email</button>
+                </form>
+            </div>
+
+            <!-- QR Locator and Gravesite -->
+            <div class="mt-8">
+                <h2 class="mb-4 font-semibold text-gray-900 text-xl">Locate the Gravesite</h2>
+                <div class="flex justify-center">
+                    <a href="#" class="bg-teal-500 hover:bg-teal-600 px-4 py-2 rounded text-white transition duration-300">Scan QR to Locate Gravesite</a>
                 </div>
-                <button type="submit" class="bg-blue-500 px-4 py-2 rounded-lg text-white">Add Date</button>
-            </form>
+            </div>
         </div>
     </main>
 
@@ -99,61 +186,11 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            flatpickr('#calendar', {
-                inline: true,
-                enableTime: false,
-                dateFormat: 'Y-m-d'
-            });
-
-            flatpickr('.flatpickr', {
-                enableTime: false,
-                dateFormat: 'Y-m-d'
-            });
-
-            const achievements = [
-                { title: 'Birthday', date: '1920-01-01' },
-                { title: 'Graduated from University', date: '1940-05-15' },
-                { title: 'Married', date: '1950-06-20' },
-                { title: 'First Child Born', date: '1952-09-30' },
-                { title: 'Retirement', date: '1985-12-01' },
-                { title: 'Passed Away', date: '2000-11-11' }
-            ];
-
-            const achievementsList = document.getElementById('achievements-list');
-            achievements.forEach(achievement => {
-                const li = document.createElement('li');
-                li.classList.add('bg-gray-50', 'p-4', 'border', 'rounded-lg');
-                li.innerHTML = `<strong>${achievement.title}:</strong> ${achievement.date}`;
-                achievementsList.appendChild(li);
-            });
-
-            document.getElementById('remembrance-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const title = document.getElementById('title').value;
-                const date = document.getElementById('date').value;
-
-                if (title && date) {
-                    const newAchievement = { title, date };
-                    achievements.push(newAchievement);
-
-                    const li = document.createElement('li');
-                    li.classList.add('bg-gray-50', 'p-4', 'border', 'rounded-lg');
-                    li.innerHTML = `<strong>${newAchievement.title}:</strong> ${newAchievement.date}`;
-                    achievementsList.appendChild(li);
-
-                    alert(`Remembrance date added: ${title} on ${date}`);
-                    document.getElementById('remembrance-form').reset();
-                } else {
-                    alert('Please fill out both fields.');
-                }
-            });
-
-            document.getElementById('mobile-menu-button').addEventListener('click', function() {
-                const menu = document.getElementById('mobile-menu');
-                menu.classList.toggle('hidden');
-            });
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         });
     </script>
 </body>
+
 </html>
