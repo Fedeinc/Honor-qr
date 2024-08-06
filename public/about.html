@@ -8,25 +8,21 @@
     <meta name="description" content="Learn more about HonorQR, our mission, vision, and the team dedicated to preserving memories forever.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* Custom cursor styles */
         body {
-            cursor: url('https://source.unsplash.com/random/32x32?cursor'), auto;
+            cursor: url('IMAGES/DALL·E 2024-07-30 13.42.13 - A sleek, modern arrow cursor icon isolated on a transparent background. The icon should be simple and minimalistic, with clean lines and a slight shad.webp') , auto;
         }
         .btn-primary {
-            cursor: url('https://source.unsplash.com/random/32x32?pointer'), pointer;
+            cursor: url('IMAGES/DALL·E 2024-07-30 13.43.22 - A sleek, modern cursor pointer icon, resembling a hand with an extended index finger, isolated on a transparent background. The design should be simpl.webp') , pointer;
         }
         .interactive-element:hover {
-            cursor: url('https://source.unsplash.com/random/32x32?hover'), pointer;
+            cursor: url('IMAGES/DALL·E 2024-07-30 13.43.34 - A sleek, modern cursor icon in a hover state, with a subtle glow or highlight effect around the arrow, isolated on a transparent background. The desig.webp') , pointer;
         }
 
         /* Hero background */
         .hero-bg {
-    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.50) 0%,rgba(0,0,0,0.50) 100%), url(IMAGES/DALL%C2%B7E%202024-07-30%2010.37.53%20-%20A%20quiet%20memorial%20courtyard%20at%20dawn,%20featuring%20elegant%20stone%20benches%20and%20flowering%20plants.%20The%20courtyard%20is%20surrounded%20by%20tall%20trees,%20creating%20a%20seclud.webp);
-    background-image: -moz-linear-gradient(270deg,rgba(0,0,0,0.50) 0%,rgba(0,0,0,0.50) 100%), url(IMAGES/DALL%C2%B7E%202024-07-30%2010.37.53%20-%20A%20quiet%20memorial%20courtyard%20at%20dawn,%20featuring%20elegant%20stone%20benches%20and%20flowering%20plants.%20The%20courtyard%20is%20surrounded%20by%20tall%20trees,%20creating%20a%20seclud.webp);
-    background-image: -o-linear-gradient(270deg,rgba(0,0,0,0.50) 0%,rgba(0,0,0,0.50) 100%), url(IMAGES/DALL%C2%B7E%202024-07-30%2010.37.53%20-%20A%20quiet%20memorial%20courtyard%20at%20dawn,%20featuring%20elegant%20stone%20benches%20and%20flowering%20plants.%20The%20courtyard%20is%20surrounded%20by%20tall%20trees,%20creating%20a%20seclud.webp);
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(IMAGES/DALL%C2%B7E%202024-07-30%2010.37.53%20-%20A%20quiet%20memorial%20courtyard%20at%20dawn,%20featuring%20elegant%20stone%20benches%20and%20flowering%20plants.%20The%20courtyard%20is%20surrounded%20by%20tall%20trees,%20creating%20a%20seclud.webp);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('IMAGES/DALL·E 2024-07-30 10.37.53 - A quiet memorial courtyard at dawn, featuring elegant stone benches and flowering plants. The courtyard is surrounded by tall trees, creating a seclud.webp');
     background-size: cover;
     background-position: center bottom;
         }
@@ -112,163 +108,162 @@
 
 <body class="bg-gray-100">
     <!-- Navigation -->
-    <nav class="top-0 left-0 z-50 fixed bg-gray-800 shadow-md w-full">
-    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
-        <div class="flex justify-between items-center h-16">
-            <div class="flex items-center">
-                <a href="index.html" class="flex items-center space-x-3">
-                    <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
-                    <span class="font-semibold text-white text-xl">HonorQR</span>
-                </a>
-            </div>
-            <div class="md:flex hidden md:ml-4">
-                <ul class="flex space-x-8">
-                    <li><a href="index.html" class="px-3 py-2 rounded text-white">Home</a></li>
-                    <li><a href="about.html" class="px-3 py-2 rounded text-white">About</a></li>
-                    <li><a href="features.html" class="px-3 py-2 rounded text-white">Features</a></li>
-                    <li><a href="prices.html" class="px-3 py-2 rounded text-white">Prices</a></li>
-                    <li><a href="faq.html" class="px-3 py-2 rounded text-white">FAQ</a></li>
-                    <li><a href="contact.html" class="px-3 py-2 rounded text-white">Contact</a></li>
-                    <li><a href="login.html" class="px-3 py-2 rounded text-white">Login</a></li>
-                </ul>
-            </div>
-            <div class="md:hidden">
-                <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+    <nav class="nav-bg fixed top-0 left-0 w-full z-50 shadow-md">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
+                        <span class="text-xl font-semibold text-white">HonorQR</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex md:ml-4">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="nav-link px-3 py-2 rounded">Home</a></li>
+                        <li><a href="about.html" class="nav-link px-3 py-2 rounded">About</a></li>
+                        <li><a href="features.html" class="nav-link px-3 py-2 rounded">Features</a></li>
+                        <li><a href="prices.html" class="nav-link px-3 py-2 rounded">Prices</a></li>
+                        <li><a href="faq.html" class="nav-link px-3 py-2 rounded">FAQ</a></li>
+                        <li><a href="contact.html" class="nav-link px-3 py-2 rounded">Contact</a></li>
+                        <li><a href="login.html" class="nav-link px-3 py-2 rounded">Login</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden">
+                    <button id="hamburger-button" class="inline-flex items-center justify-center p-2 text-white rounded-lg hover:bg-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="hidden md:hidden" id="mobile-menu">
-        <ul class="flex flex-col space-y-2 bg-gray-700 mt-2">
-            <li><a href="index.html" class="block px-4 py-2 rounded text-white">Home</a></li>
-            <li><a href="about.html" class="block px-4 py-2 rounded text-white">About</a></li>
-            <li><a href="features.html" class="block px-4 py-2 rounded text-white">Features</a></li>
-            <li><a href="prices.html" class="block px-4 py-2 rounded text-white">Prices</a></li>
-            <li><a href="faq.html" class="block px-4 py-2 rounded text-white">FAQ</a></li>
-            <li><a href="contact.html" class="block px-4 py-2 rounded text-white">Contact</a></li>
-            <li><a href="login.html" class="block px-4 py-2 rounded text-white">Login</a></li>
-        </ul>
-    </div>
-</nav>
-
+        <div class="hidden md:hidden" id="mobile-menu">
+            <ul class="flex flex-col mt-2 space-y-2 bg-gray-700">
+                <li><a href="index.html" class="nav-link block px-4 py-2 rounded">Home</a></li>
+                <li><a href="about.html" class="nav-link block px-4 py-2 rounded">About</a></li>
+                <li><a href="features.html" class="nav-link block px-4 py-2 rounded">Features</a></li>
+                <li><a href="prices.html" class="nav-link block px-4 py-2 rounded">Prices</a></li>
+                <li><a href="faq.html" class="nav-link block px-4 py-2 rounded">FAQ</a></li>
+                <li><a href="contact.html" class="nav-link block px-4 py-2 rounded">Contact</a></li>
+                <li><a href="login.html" class="nav-link block px-4 py-2 rounded">Login</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="flex justify-center items-center bg-cover bg-center h-screen hero-bg">
-        <div class="mx-auto px-4 text-center text-white container">
-            <h1 class="mb-4 font-serif text-6xl fade-in">About HonorQR</h1>
-            <p class="mb-8 font-sans text-2xl fade-in" data-aos="fade-up">Preserve Memories Forever</p>
+    <section class="hero-bg bg-cover bg-center h-screen flex items-center justify-center">
+        <div class="container mx-auto text-center text-white px-4">
+            <h1 class="text-6xl font-serif mb-4 fade-in">About HonorQR</h1>
+            <p class="text-2xl font-sans mb-8 fade-in" data-aos="fade-up">Preserve Memories Forever</p>
         </div>
     </section>
 
     <!-- Mission and Vision Section -->
-    <section class="bg-white py-16">
-        <div class="mx-auto px-4 text-center container">
-            <h2 class="mb-8 font-bold text-4xl text-gray-900 fade-in">Our Mission and Vision</h2>
-            <p class="mb-8 text-gray-700 text-xl animation-delay-200 fade-in">
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8 fade-in">Our Mission and Vision</h2>
+            <p class="text-xl text-gray-700 mb-8 fade-in animation-delay-200">
                 At HonorQR, we aim to transform the way we remember and celebrate the lives of our loved ones. By integrating technology with traditional memorials, we provide a dynamic, interactive, and lasting way to preserve memories.
             </p>
-            <p class="mb-8 text-gray-700 text-xl animation-delay-400 fade-in">
+            <p class="text-xl text-gray-700 mb-8 fade-in animation-delay-400">
                 Our vision is to create a digital sanctuary that connects people, fosters remembrance, and keeps the essence of those we cherish alive forever.
             </p>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="bg-gray-100 py-16">
-        <div class="mx-auto px-4 text-center container">
-            <h2 class="mb-12 font-bold text-4xl text-gray-900 fade-in">Meet Our Team</h2>
-            <div class="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <div class="team-card">
-                    <img src="IMAGES/Photoleap_22_06_2024_23_32_24_pF8Qo.jpg" alt="Thabo S Dlamini" class="rounded-lg w-full h-full object-cover">
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 fade-in">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="team-card">
+                    <img src="IMAGES/Photoleap_22_06_2024_23_34_17_E5RC4.jpg" alt="Team Member 1" class="w-full h-full object-cover rounded-lg">
                     <div class="team-card_content">
                         <span class="team-card_title">Thabo S Dlamini</span>
                         <span class="team-card_subtitle">CEO & Founder</span>
-                        <p class="team-card_description">Thabo is the visionary behind HonorQR, dedicated to transforming the way we remember our loved ones through innovative technology.</p>
+                      <p class="team-card_description">Thabo is the visionary behind HonorQR, dedicated to transforming the way we remember our loved ones through innovative technology.</p>
                     </div>
                 </div>
                 <div class="team-card">
-                    <img src="IMAGES/Photoleap_24_06_2024_23_09_38_b5uew.jpg" alt="Kele Mashele" class="rounded-lg w-full h-full object-cover">
+                  <img src="IMAGES/Photoleap_24_06_2024_23_09_38_b5uew.jpg" alt="Team Member 2" class="w-full h-full object-cover rounded-lg">
                     <div class="team-card_content">
                         <span class="team-card_title">Kele Mashele</span>
                         <span class="team-card_subtitle">CTO</span>
-                        <p class="team-card_description">Kele leads our tech team, ensuring the platform is robust, user-friendly, and secure, allowing users to create and share lasting memories effortlessly.</p>
-                    </div>
+                      <p class="team-card_description">Jane leads our tech team, ensuring the platform is robust, user-friendly, and secure, allowing users to create and share lasting memories effortlessly.</p>
+                  </div>
                 </div>
                 <div class="team-card">
-                    <img src="IMAGES/Photoleap_24_06_2024_23_14_31_GC5GE.jpg" alt="Sam Poe" class="rounded-lg w-full h-full object-cover">
+                  <img src="IMAGES/Photoleap_24_06_2024_23_14_31_GC5GE.jpg" alt="Team Member 3" class="w-full h-full object-cover rounded-lg">
                     <div class="team-card_content">
                         <span class="team-card_title">Sam Poe</span>
                         <span class="team-card_subtitle">COO</span>
-                        <p class="team-card_description">Sam oversees daily operations, making sure everything runs smoothly and that our users have the best possible experience with HonorQR.</p>
-                    </div>
+                      <p class="team-card_description">Sam oversees daily operations, making sure everything runs smoothly and that our users have the best possible experience with HonorQR.</p>
+                  </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action Section -->
-    <section class="bg-cover bg-center py-16" style="background-image: url('https://source.unsplash.com/random/1920x1080?mission');">
-        <div class="bg-white bg-opacity-70 mx-auto px-4 py-12 rounded-lg text-center container">
-            <h2 class="mb-4 font-bold text-4xl text-gray-900 fade-in">Join Our Mission</h2>
-            <p class="mb-8 text-gray-700 text-xl animation-delay-200 fade-in">Be a part of our journey to transform memorials and preserve memories forever. Connect with us and discover how you can make a difference.</p>
-            <div class="flex md:flex-row flex-col justify-center md:space-x-4 space-y-4 md:space-y-0">
-                <a href="contact.html" class="px-6 py-3 rounded-lg text-lg animation-delay-400 btn-primary fade-in">Contact Us</a>
-                <a href="signup.html" class="px-6 py-3 rounded-lg text-lg animation-delay-600 btn-primary fade-in">Sign Up</a>
+    <section class="py-16 bg-cover bg-center" style="background-image: url('IMAGES/call-to-action.jpg');">
+        <div class="container mx-auto px-4 text-center bg-white bg-opacity-70 py-12 rounded-lg">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4 fade-in">Join Our Mission</h2>
+            <p class="text-xl text-gray-700 mb-8 fade-in animation-delay-200">Be a part of our journey to transform memorials and preserve memories forever. Connect with us and discover how you can make a difference.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="contact.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in animation-delay-400">Contact Us</a>
+                <a href="signup.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in animation-delay-600">Sign Up</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-12 text-white">
-        <div class="mx-auto px-4 container">
-            <div class="flex md:flex-row flex-col justify-between">
-                <!-- Navigation Links -->
-                <div class="mb-8 md:mb-0">
-                    <h3 class="mb-4 font-semibold text-xl">Quick Links</h3>
-                    <ul>
-                        <li class="mb-2"><a href="about.html" class="hover:underline">About</a></li>
-                        <li class="mb-2"><a href="features.html" class="hover:underline">Features</a></li>
-                        <li class="mb-2"><a href="how-it-works.html" class="hover:underline">How It Works</a></li>
-                        <li class="mb-2"><a href="blog.html" class="hover:underline">Blog</a></li>
-                        <li class="mb-2"><a href="contact.html" class="hover:underline">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- Social Media Links -->
-                <div class="mb-8 md:mb-0">
-                    <h3 class="mb-4 font-semibold text-xl">Follow Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="hover:text-gray-400"><i class="fa-facebook-f fab" aria-label="Facebook"></i></a>
-                        <a href="#" class="hover:text-gray-400"><i class="fa-twitter fab" aria-label="Twitter"></i></a>
-                        <a href="#" class="hover:text-gray-400"><i class="fa-instagram fab" aria-label="Instagram"></i></a>
-                    </div>
-                </div>
-                <!-- Legal Links -->
-                <div class="mb-8 md:mb-0">
-                    <h3 class="mb-4 font-semibold text-xl">Legal</h3>
-                    <ul>
-                        <li class="mb-2"><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
-                        <li class="mb-2"><a href="terms.html" class="hover:underline">Terms of Use</a></li>
-                    </ul>
-                </div>
-                <!-- Educational Resources -->
-                <div>
-                    <h3 class="mb-4 font-semibold text-xl">Educational Resources</h3>
-                    <ul>
-                        <li class="mb-2"><a href="grief-support.html" class="hover:underline">Grief Support</a></li>
-                        <li class="mb-2"><a href="coping-mechanisms.html" class="hover:underline">Coping Mechanisms</a></li>
-                        <li class="mb-2"><a href="end-of-life-planning.html" class="hover:underline">End-of-Life Planning</a></li>
-                    </ul>
+    <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+            <!-- Navigation Links -->
+            <div class="mb-8 md:mb-0">
+                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                <ul>
+                    <li class="mb-2"><a href="about.html" class="hover:underline">About</a></li>
+                    <li class="mb-2"><a href="features.html" class="hover:underline">Features</a></li>
+                    <li class="mb-2"><a href="how-it-works.html" class="hover:underline">How It Works</a></li>
+                    <li class="mb-2"><a href="blog.html" class="hover:underline">Blog</a></li>
+                    <li class="mb-2"><a href="contact.html" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Social Media Links -->
+            <div class="mb-8 md:mb-0">
+                <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.896-.956-2.173-1.555-3.591-1.555-2.719 0-4.92 2.201-4.92 4.917 0 .385.045.76.128 1.122-4.088-.205-7.713-2.164-10.141-5.144-.424.728-.667 1.575-.667 2.476 0 1.709.87 3.217 2.191 4.099-.808-.026-1.569-.247-2.228-.616-.001.021-.001.042-.001.064 0 2.385 1.698 4.374 3.946 4.828-.413.111-.848.171-1.296.171-.317 0-.625-.031-.927-.087.626 1.956 2.444 3.379 4.599 3.419-1.685 1.321-3.809 2.109-6.115 2.109-.398 0-.79-.023-1.174-.068 2.179 1.396 4.767 2.21 7.548 2.21 9.057 0 14.01-7.506 14.01-14.01 0-.213-.005-.426-.014-.637.961-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+                    <a href="#" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c-5.488 0-9.963 4.477-9.963 9.963 0 4.4 3.657 8.148 8.341 9.71.607.111.826-.264.826-.587 0-.29-.011-1.055-.016-2.07-3.396.737-4.113-1.63-4.113-1.63-.553-1.404-1.35-1.78-1.35-1.78-1.104-.755.084-.74.084-.74 1.22.086 1.861 1.253 1.861 1.253 1.085 1.86 2.85 1.322 3.546 1.011.11-.788.424-1.322.77-1.626-2.709-.309-5.56-1.354-5.56-6.024 0-1.331.468-2.417 1.233-3.268-.123-.309-.534-1.554.117-3.236 0 0 1.005-.322 3.293 1.246.957-.266 1.983-.398 3.003-.403 1.02.005 2.046.137 3.004.403 2.288-1.568 3.291-1.246 3.291-1.246.652 1.682.241 2.927.119 3.236.767.851 1.232 1.937 1.232 3.268 0 4.684-2.857 5.71-5.574 6.014.436.377.82 1.127.82 2.273 0 1.64-.015 2.964-.015 3.368 0 .325.218.703.834.583 4.683-1.562 8.337-5.31 8.337-9.71 0-5.486-4.475-9.963-9.963-9.963z"/></svg></a>
+                    <a href="https://x.com/HonorQr" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.947 8.305c.014.204.014.408.014.612 0 6.242-4.748 13.442-13.442 13.442-2.67 0-5.153-.779-7.237-2.127.374.045.748.075 1.133.075 2.217 0 4.26-.748 5.896-2.007-2.063-.045-3.8-1.395-4.398-3.26.287.045.564.075.861.075.418 0 .826-.06 1.212-.149-2.162-.43-3.779-2.341-3.779-4.636v-.06c.629.348 1.349.556 2.117.577-1.256-.836-2.08-2.264-2.08-3.874 0-.861.23-1.668.63-2.364 2.299 2.848 5.748 4.73 9.617 4.927-.075-.348-.119-.707-.119-1.084 0-2.598 2.112-4.71 4.71-4.71 1.361 0 2.589.577 3.448 1.494 1.084-.204 2.095-.609 3.008-1.14-.356 1.1-1.104 2.026-2.095 2.615 1-.119 1.949-.374 2.844-.749-.698 1.003-1.575 1.873-2.594 2.568z"/></svg></a>
                 </div>
             </div>
-            <div class="mt-8 text-center">
-                <p>&copy; 2024 HonorQR. All rights reserved.</p>
+            <!-- Legal Links -->
+            <div class="mb-8 md:mb-0">
+                <h3 class="text-xl font-semibold mb-4">Legal</h3>
+                <ul>
+                    <li class="mb-2"><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
+                    <li class="mb-2"><a href="Security.html" class="hover:underline">Terms of Use</a></li>
+                </ul>
+            </div>
+            <!-- Educational Resources -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Educational Resources</h3>
+                <ul>
+                    <li class="mb-2"><a href="grief-support.html" class="hover:underline">Grief Support</a></li>
+                    <li class="mb-2"><a href="coping-mechanisms.html" class="hover:underline">Coping Mechanisms</a></li>
+                    <li class="mb-2"><a href="end-of-life-planning.html" class="hover:underline">End-of-Life Planning</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <div class="text-center mt-8">
+            <p>&copy; 2024 HonorQR. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

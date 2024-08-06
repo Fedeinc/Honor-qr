@@ -8,7 +8,6 @@
     <meta name="description" content="Find answers to common questions about HonorQR. Learn more about our services, features, and support.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="public/styles.css" rel="stylesheet">
     <style>
         /* Custom cursor styles */
         body {
@@ -54,49 +53,54 @@
 
 <body class="bg-gray-100">
     <!-- Navigation -->
-    <nav class="top-0 left-0 z-50 fixed bg-gray-800 shadow-md w-full">
-    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
-        <div class="flex justify-between items-center h-16">
-            <div class="flex items-center">
-                <a href="index.html" class="flex items-center space-x-3">
-                    <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
-                    <span class="font-semibold text-white text-xl">HonorQR</span>
-                </a>
-            </div>
-            <div class="md:flex hidden md:ml-4">
-                <ul class="flex space-x-8">
-                    <li><a href="index.html" class="px-3 py-2 rounded text-white">Home</a></li>
-                    <li><a href="about.html" class="px-3 py-2 rounded text-white">About</a></li>
-                    <li><a href="features.html" class="px-3 py-2 rounded text-white">Features</a></li>
-                    <li><a href="prices.html" class="px-3 py-2 rounded text-white">Prices</a></li>
-                    <li><a href="faq.html" class="px-3 py-2 rounded text-white">FAQ</a></li>
-                    <li><a href="contact.html" class="px-3 py-2 rounded text-white">Contact</a></li>
-                    <li><a href="login.html" class="px-3 py-2 rounded text-white">Login</a></li>
-                </ul>
-            </div>
-            <div class="md:hidden">
-                <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+    <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="dashboard.html" class="flex items-center space-x-3">
+                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
+                        <span class="font-semibold text-white text-xl">HonorQR</span>
+                    </a>
+                </div>
+                <div class="md:flex hidden md:ml-4">
+                    <ul class="flex space-x-8">
+                        <li><a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
+                        <li><a href="tribute-wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a></li>
+                        <li><a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
+                        <li><a href="qr-locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Locator</a></li>
+                        <li><a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
+                        <li><a href="remembrance.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
+                        <li><a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
+                        <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                        <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                        <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden">
+                    <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="hidden md:hidden" id="mobile-menu">
-        <ul class="flex flex-col space-y-2 bg-gray-700 mt-2">
-            <li><a href="index.html" class="block px-4 py-2 rounded text-white">Home</a></li>
-            <li><a href="about.html" class="block px-4 py-2 rounded text-white">About</a></li>
-            <li><a href="features.html" class="block px-4 py-2 rounded text-white">Features</a></li>
-            <li><a href="prices.html" class="block px-4 py-2 rounded text-white">Prices</a></li>
-            <li><a href="faq.html" class="block px-4 py-2 rounded text-white">FAQ</a></li>
-            <li><a href="contact.html" class="block px-4 py-2 rounded text-white">Contact</a></li>
-            <li><a href="login.html" class="block px-4 py-2 rounded text-white">Login</a></li>
-        </ul>
-    </div>
-</nav>
-
+        <div class="hidden md:hidden" id="mobile-menu">
+            <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
+                <li><a href="profile.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
+                <li><a href="tribute-wall.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
+                <li><a href="gallery.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
+                <li><a href="qr-locator.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">QR Locator</a></li>
+                <li><a href="qr-share.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Share QR</a></li>
+                <li><a href="remembrance.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
+                <li><a href="chatbot.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
+                <li><a href="faq.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                <li><a href="login.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                <li><a href="logout.html" class="block px-4 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
 
 <script>
     document.getElementById('hamburger-button').addEventListener('click', function () {

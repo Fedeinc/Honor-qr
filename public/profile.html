@@ -8,11 +8,6 @@
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Custom styles -->
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 
 <body class="bg-gray-100">
@@ -29,7 +24,7 @@
             </div>
             <div class="md:flex hidden md:ml-4">
                 <ul class="flex space-x-8">
-                    
+                    <li><a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
                     <li><a href="tribute wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a></li>
                     <li><a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
                     <li><a href="qr locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Locator</a></li>
@@ -38,7 +33,7 @@
                     <li><a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
                     <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
                     <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-                    <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+                    <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Dashboard</a></li>
                 </ul>
             </div>
             <div class="md:hidden">
@@ -67,104 +62,88 @@
     </div>
 </nav>
 
-<!-- JavaScript for Mobile Menu Toggle -->
-<script>
-    const hamburgerButton = document.getElementById('hamburger-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    hamburgerButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
-
-
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function () {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-    </script>
-
+    <!-- Profile Header -->
     <header class="bg-white shadow mt-16">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8 py-6 max-w-7xl">
-            <h1 class="text-3xl font-bold text-gray-900">John Doe</h1>
-            <p class="mt-1 text-gray-600">In loving memory of John Doe, a beloved father, husband, and friend. 1950 - 2023</p>
+        <div class="max-w-7xl mx-auto">
+            <div class="relative">
+                <a href="profile.html"><img class="w-full h-64 object-cover" src="IMAGES/IMG-20240618-WA0031.jpg" alt="Cover Photo"></a>
+<div class="absolute bottom-0 left-0 p-4">
+          <img class="h-32 w-32 rounded-full border-4 border-white" src="IMAGES/Photoleap_29_06_2024_16_19_17_u0BnK.jpg" alt="Profile Picture">
+        <h1 class="text-3xl font-bold text-gray-900 mt-2">John Doe</h1>
+                    <p class="text-gray-600">In loving memory of John Doe, a beloved father, husband, and friend. 1950 - 2023</p>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Profile Content -->
     <main class="py-10">
-        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <!-- Main Content -->
-            <div class="bg-white shadow sm:rounded-lg overflow-hidden">
-                <div class="px-4 py-5 sm:px-6">
-                    <h3 class="text-lg font-medium leading-6 text-gray-900">Profile Information</h3>
-                    <p class="mt-1 text-sm text-gray-500 max-w-2xl">Personal details and memories of John Doe.</p>
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Left Sidebar -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+                        <div class="px-4 py-5 sm:px-6">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Profile Information</h3>
+                            <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and memories of John Doe.</p>
+                        </div>
+                        <div class="border-t border-gray-200">
+                            <dl>
+                                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt class="text-sm font-medium text-gray-500">Full name</dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">John Doe</dd>
+                                </div>
+                                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt class="text-sm font-medium text-gray-500">Date of Birth</dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">January 1, 1950</dd>
+                                </div>
+                                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt class="text-sm font-medium text-gray-500">Date of Passing</dt>
+                                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">June 30, 2023</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
-                <div class="border-t border-gray-200">
-                    <dl>
-                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Full name</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">John Doe</dd>
-                        </div>
-                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Date of Birth</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">January 1, 1950</dd>
-                        </div>
-                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Date of Passing</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">June 30, 2023</dd>
-                        </div>
-                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Biography</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">John Doe was a man of great wisdom and kindness. He loved his family deeply and was always there to lend a helping hand...</dd>
-                        </div>
-                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Gallery</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                <!-- Gallery -->
-                                <div class="grid gap-4 grid-cols-2 md:grid-cols-4">
-                                    <img src="IMAGES/IMG-20240618-WA0031.jpg" alt="Photo 1" class="rounded-lg shadow-lg">
-                                    <img src="IMAGES/Photoleap_29_06_2024_16_19_17_u0BnK.jpg" alt="Photo 2" class="rounded-lg shadow-lg">
-                                    <img src="IMAGES/Photoleap_29_06_2024_16_19_40_LSzLJ.jpg" alt="Photo 3" class="rounded-lg shadow-lg">
-                                    <img src="IMAGES/Photoleap_24_06_2024_23_14_19_vrjjZ.jpg" alt="Photo 4" class="rounded-lg shadow-lg">
+
+                <!-- Main Content -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Full Biography -->
+                    <div class="bg-white shadow sm:rounded-lg p-4">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">Biography</h2>
+                        <p class="text-gray-900">John Doe was a man of great wisdom and kindness. He loved his family deeply and was always there to lend a helping hand. He was known for his infectious smile and the ability to bring joy to those around him. Born in 1950, John grew up in a small town where he learned the value of hard work and community. He went on to become a successful entrepreneur, always prioritizing the well-being of his employees and customers.</p>
+                        <p class="text-gray-900 mt-4">John married the love of his life, Jane, in 1975. Together, they raised three wonderful children who remember him as a loving and supportive father. John's hobbies included gardening, reading, and volunteering at the local shelter. He believed in giving back to the community and spent countless hours helping those in need.</p>
+                        <p class="text-gray-900 mt-4">Throughout his life, John remained a beacon of positivity and resilience. Even in his final days, he continued to inspire others with his strength and grace. His legacy lives on through his family and the many lives he touched. John will be dearly missed, but his memory will forever remain in our hearts.</p>
+                    </div>
+
+                    <!-- Posts Feed -->
+                    <div class="space-y-6">
+                        <!-- Post -->
+                        <div class="bg-white shadow sm:rounded-lg p-4">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <img class="h-10 w-10 rounded-full" src="IMAGES/Photoleap_24_06_2024_23_08_56_e8uPs.jpg" alt="Profile Picture">
+                                <div>
+                                    <h3 class="text-sm font-medium text-gray-900">Jane Smith</h3>
+                                    <p class="text-xs text-gray-500">2 hours ago</p>
                                 </div>
-                            </dd>
+                            </div>
+                            <p class="text-gray-900">John was an incredible person who always knew how to make everyone smile. He will be deeply missed.</p>
+                            <div class="mt-4 flex space-x-4">
+                                <button class="text-blue-500 hover:underline">Like</button>
+                                <button class="text-blue-500 hover:underline">Comment</button>
+                            </div>
                         </div>
-                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt class="text-sm font-medium text-gray-500">Tribute Wall</dt>
-                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                <div class="space-y-4">
-                                    <div class="p-4 bg-gray-50 rounded-lg shadow-md">
-                                        <p class="text-sm text-gray-900"><strong>Jane Smith:</strong> John was an incredible person who always knew how to make everyone smile. He will be deeply missed.</p>
-                                    </div>
-                                    <div class="p-4 bg-gray-50 rounded-lg shadow-md">
-                                        <p class="text-sm text-gray-900"><strong>Michael Brown:</strong> I remember the great times we had together during our college days. Rest in peace, my friend.</p>
-                                    </div>
-                                    <!-- Add more tributes here -->
-                                </div>
-                                <!-- Tribute form -->
-                                <form class="mt-4 space-y-4">
-                                    <div>
-                                        <label for="tribute" class="block text-sm font-medium text-gray-700">Leave a Tribute</label>
-                                        <textarea id="tribute" name="tribute" rows="4" class="mt-1 block w-full sm:text-sm border-gray-300 rounded-md shadow-sm"></textarea>
-                                    </div>
-                                    <div class="text-right">
-                                        <button type="submit" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md">Submit</button>
-                                    </div>
-                                </form>
-                            </dd>
-                        </div>
-                    </dl>
+                        <!-- More posts -->
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-white">
+    <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="mb-4 md:mb-0">
                     <span class="text-2xl font-semibold">HonorQR</span>
                     <span class="block text-gray-400">© 2024 All rights reserved.</span>

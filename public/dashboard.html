@@ -4,33 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HonorQR Dashboard</title>
+    <title>HonorQR Dashboard - GTA 5 Style</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #1b1b1b;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        .nav-bar, .footer {
+            background-color: #2c2c2c;
+        }
+        .nav-bar a, .footer a {
+            color: #4caf50;
+        }
+        .nav-bar a:hover, .footer a:hover {
+            color: #fff;
+        }
+        .card {
+            background-color: #2c2c2c;
+            border: 1px solid #444;
+        }
+        .card:hover {
+            background-color: #333;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 font-sans">
+<body>
     <!-- Navigation Bar -->
-    <nav class="top-0 left-0 z-50 fixed border-gray-200 bg-white shadow-md border-b w-full">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
-            <div class="flex justify-between items-center h-16">
+    <nav class="nav-bar border-b fixed top-0 left-0 w-full z-50 shadow-md">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <img src="IMAGES/IMG-20240708-WA0002.jpg" alt="HonorQR Logo" class="h-10">
-                    <span class="ml-3 font-semibold text-gray-900 text-xl">HonorQR</span>
+                    <img src="IMAGES/logo.jpg" alt="HonorQR Logo" class="h-10">
+                    <span class="text-xl font-semibold ml-3">HonorQR</span>
                 </div>
-                <div class="md:flex hidden md:ml-4">
+                <div class="hidden md:flex md:ml-4">
                     <ul class="flex space-x-8">
-                        <li><a href="dashboard.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Home</a></li>
-                        <li><a href="profile.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Profile</a></li>
-                        <li><a href="privacy.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Privacy</a></li>
-                        <li><a href="notifications.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Notifications</a></li>
-                        <li><a href="billing.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Billing</a></li>
-                        <li><a href="security.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Security</a></li>
-                        <li><a href="logout.html" class="hover:bg-gray-100 px-3 py-2 rounded text-gray-900">Logout</a></li>
+                        <li><a href="dashboard.html" class="px-3 py-2 rounded hover:bg-gray-700">Home</a></li>
+                        <li><a href="profile.html" class="px-3 py-2 rounded hover:bg-gray-700">Profile</a></li>
+                        <li><a href="privacy.html" class="px-3 py-2 rounded hover:bg-gray-700">Privacy</a></li>
+                        <li><a href="notifications.html" class="px-3 py-2 rounded hover:bg-gray-700">Notifications</a></li>
+                        <li><a href="billing.html" class="px-3 py-2 rounded hover:bg-gray-700">Billing</a></li>
+                        <li><a href="security.html" class="px-3 py-2 rounded hover:bg-gray-700">Security</a></li>
+                        <li><a href="logout.html" class="px-3 py-2 rounded hover:bg-gray-700">Logout</a></li>
                     </ul>
                 </div>
                 <div class="md:hidden">
-                    <button class="hover:bg-gray-100 p-2 rounded text-gray-500" id="mobile-menu-button" aria-label="Toggle Menu">
+                    <button class="text-gray-500 hover:bg-gray-700 p-2 rounded" id="mobile-menu-button" aria-label="Toggle Menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -39,116 +61,122 @@
             </div>
         </div>
         <div class="hidden md:hidden" id="mobile-menu">
-            <ul class="flex flex-col border-gray-200 bg-gray-50 border-t">
-                <li><a href="dashboard.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Home</a></li>
-                <li><a href="profile.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Profile</a></li>
-                <li><a href="privacy.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Privacy</a></li>
-                <li><a href="notifications.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Notifications</a></li>
-                <li><a href="billing.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Billing</a></li>
-                <li><a href="security.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Security</a></li>
-                <li><a href="logout.html" class="hover:bg-gray-100 px-4 py-2 text-gray-900">Logout</a></li>
+            <ul class="flex flex-col bg-gray-50 border-t border-gray-200">
+                <li><a href="dashboard.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Home</a></li>
+                <li><a href="profile.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Profile</a></li>
+                <li><a href="privacy.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Privacy</a></li>
+                <li><a href="notifications.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Notifications</a></li>
+                <li><a href="billing.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Billing</a></li>
+                <li><a href="security.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Security</a></li>
+                <li><a href="logout.html" class="px-4 py-2 text-gray-900 hover:bg-gray-700">Logout</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Dashboard -->
-    <div class="mx-auto mt-16 px-4 sm:px-6 lg:px-8 py-12 max-w-6xl">
-    <div class="text-center">
-        <h2 class="font-extrabold text-3xl text-white">Dashboard</h2>
-        <p class="mt-2 text-gray-400 text-sm">Manage your HonorQR account here.</p>
+    <div class="max-w-6xl mx-auto py-12 mt-16 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold">Dashboard</h2>
+            <p class="mt-2 text-sm text-gray-500">Manage your HonorQR account here.</p>
+        </div>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Profile -->
+            <a href="profile.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 10.51.45 - A serene and modern visual representation of 'Create an Account' and 'Login' steps for HonorQR. The image features a clean and minimalist design with .webp" alt="Profile" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">Profile</p>
+                </div>
+            </a>
+            <!-- Tribute Wall -->
+            <a href="tribute wall.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/hero.webp" alt="Tribute Wall" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">Tribute Wall</p>
+                </div>
+            </a>
+            <!-- Gallery -->
+            <a href="gallery.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/IMG-20240712-WA0005.jpg" alt="Gallery" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">Gallery</p>
+                </div>
+            </a>
+            <!-- QR Locator -->
+            <a href="qr locator.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.08.10 - A QR code with a magnifying glass in a calm, elegant setting with soft lighting, similar to the provided image.webp" alt="QR Locator" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">QR Locator</p>
+                </div>
+            </a>
+            <!-- Share QR -->
+            <a href="qr share.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/IMG-20240618-WA0038.jpg" alt="Share QR" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">Share QR</p>
+                </div>
+            </a>
+            <!-- Remembrance -->
+            <a href="remembrance.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.09.25 - A calendar with a heart symbol in a serene setting with soft lighting and potted plants, similar to the provided image.webp" alt="Remembrance" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">Remembrance</p>
+                </div>
+            </a>
+            <!-- Chatbot -->
+            <a href="chatbot.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.10.32 - A speech bubble with a smiling robot face in a calm, elegant setting with soft lighting, similar to the provided image.webp" alt="Chatbot" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">Chatbot</p>
+                </div>
+            </a>
+            <!-- FAQ -->
+            <a href="faq.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.10.37 - A question mark inside a circle in a serene setting with soft lighting and potted plants, similar to the provided image.webp" alt="FAQ" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium">FAQ</p>
+                </div>
+            </a>
+			<!-- Live Streaming -->
+<a href="live-streaming.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+    <div>
+        <img src="IMAGES/IMG-20240618-WA0044.jpg" alt="Live Streaming" class="block mx-auto h-48 w-full object-cover">
+        <p class="pt-4 pb-4 text-sm font-medium">Live Streaming</p>
     </div>
-    <div class="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-8">
-        <!-- Profile -->
-        <a href="profile.html" class="block hover:bg-gray-800 border border-gray-700 rounded-lg w-full text-center transition-transform duration-300 overflow-hidden transform hover:scale-105 shadow-lg">
-            <div class="relative">
-                <img src="IMAGES/IMG-20240711-WA0021.jpg" alt="Profile" class="block mx-auto w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-4">
-                    <p class="font-medium text-white text-sm">Profile</p>
-                </div>
-            </div>
-        </a>
-        <!-- Tribute Wall -->
-        <a href="tribute wall.html" class="block hover:bg-gray-800 border border-gray-700 rounded-lg w-full text-center transition-transform duration-300 overflow-hidden transform hover:scale-105 shadow-lg">
-            <div class="relative">
-                <img src="IMAGES/Photoleap_24_06_2024_23_01_21_C6AXZ.jpg" alt="Tribute Wall" class="block mx-auto w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-4">
-                    <p class="font-medium text-white text-sm">Tribute Wall</p>
-                </div>
-            </div>
-        </a>
-        <!-- Gallery -->
-        <a href="gallery.html" class="block hover:bg-gray-800 border border-gray-700 rounded-lg w-full text-center transition-transform duration-300 overflow-hidden transform hover:scale-105 shadow-lg">
-            <div class="relative">
-                <img src="IMAGES/Photoleap_27_06_2024_00_03_12_sq1eE.jpg" alt="Gallery" class="block mx-auto w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-4">
-                    <p class="font-medium text-white text-sm">Gallery</p>
-                </div>
-            </div>
-        </a>
-        <!-- QR Locator -->
-        <a href="qr locator.html" class="block hover:bg-gray-800 border border-gray-700 rounded-lg w-full text-center transition-transform duration-300 overflow-hidden transform hover:scale-105 shadow-lg">
-            <div class="relative">
-                <img src="IMAGES/DALL·E 2024-07-30 16.08.10 - A QR code with a magnifying glass in a calm, elegant setting with soft lighting, similar to the provided image.webp" alt="QR Locator" class="block mx-auto w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-4">
-                    <p class="font-medium text-white text-sm">QR Locator</p>
-                </div>
-            </div>
-        </a>
-        <!-- Share QR -->
-        <a href="qr share.html" class="block hover:bg-gray-800 border border-gray-700 rounded-lg w-full text-center transition-transform duration-300 overflow-hidden transform hover:scale-105 shadow-lg">
-            <div class="relative">
-                <img src="IMAGES/DALL·E 2024-07-30 16.08.17 - A QR code with a share arrow in a tranquil setting with soft lighting and potted plants, similar to the provided image.webp" alt="Share QR" class="block mx-auto w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-4">
-                    <p class="font-medium text-white text-sm">Share QR</p>
-                </div>
-            </div>
-        </a>
-        <!-- Remembrance -->
-        <a href="remembrance.html" class="block hover:bg-gray-800 border border-gray-700 rounded-lg w-full text-center transition-transform duration-300 overflow-hidden transform hover:scale-105 shadow-lg">
-            <div class="relative">
-                <img src="IMAGES/DALL·E 2024-07-30 16.09.25 - A calendar with a heart symbol in a serene setting with soft lighting and potted plants, similar to the provided image.webp" alt="Remembrance" class="block mx-auto w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-4">
-                    <p class="font-medium text-white text-sm">Remembrance</p>
-                </div>
-            </div>
-        </a>
-        <!-- Chatbot -->
-        <a href="chatbot.html" class="block hover:bg-gray-800 border border-gray-700 rounded-lg w-full text-center transition-transform duration-300 overflow-hidden transform hover:scale-105 shadow-lg">
-            <div class="relative">
-                <img src="IMAGES/DALL·E 2024-07-30 16.10.32 - A speech bubble with a smiling robot face in a calm, elegant setting with soft lighting, similar to the provided image.webp" alt="Chatbot" class="block mx-auto w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-4">
-                    <p class="font-medium text-white text-sm">Chatbot</p>
-                </div>
-            </div>
-        </a>
-        <!-- FAQ -->
-        <a href="faq.html" class="block hover:bg-gray-800 border border-gray-700 rounded-lg w-full text-center transition-transform duration-300 overflow-hidden transform hover:scale-105 shadow-lg">
-            <div class="relative">
-                <img src="IMAGES/DALL·E 2024-07-30 16.10.37 - A question mark inside a circle in a serene setting with soft lighting and potted plants, similar to the provided image.webp" alt="FAQ" class="block mx-auto w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-4">
-                    <p class="font-medium text-white text-sm">FAQ</p>
-                </div>
-            </div>
-        </a>
+</a>
+
+<!-- Settings -->
+<a href="settings.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+    <div>
+        <img src="IMAGES/Photoleap_27_06_2024_00_24_10_ZCHFR.jpg" alt="Settings" class="block mx-auto h-48 w-full object-cover">
+        <p class="pt-4 pb-4 text-sm font-medium">Settings</p>
     </div>
-</div>
+</a>
 
+<!-- Billing -->
+<a href="billing.html" class="card block w-full text-center border rounded-lg hover:bg-gray-700 transition duration-300 overflow-hidden">
+    <div>
+        <img src="IMAGES/IMG-20240618-WA0048.jpg" alt="Billing" class="block mx-auto h-48 w-full object-cover">
+        <p class="pt-4 pb-4 text-sm font-medium">Billing</p>
+    </div>
+</a>
 
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-white">
-        <div class="mx-auto text-center container">
-            <span class="font-bold text-sm">&copy; 2024 HonorQR. All rights reserved.</span>
-            <div class="space-x-4 mt-4">
-                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
-                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+    <footer class="footer text-white py-8">
+        <div class="container mx-auto text-center">
+            <span class="text-sm font-bold">&copy; 2024 HonorQR. All rights reserved.</span>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-300">Terms of Service</a>
+                <a href="#" class="hover:text-gray-300">Contact</a>
             </div>
         </div>
     </footer>
 
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });

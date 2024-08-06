@@ -1,81 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - HonorQR</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="public/styles.css" rel="stylesheet">
-    <style>
-        .post-img, .post-video {
-            height: 450px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
-
 <body class="bg-gray-100 font-sans">
-
     <!-- Navigation Bar -->
     <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="dashboard.html" class="flex items-center space-x-3">
-                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
-                        <span class="font-semibold text-white text-xl">HonorQR</span>
-                    </a>
-                </div>
-                <div class="md:flex hidden md:ml-4">
-                    <ul class="flex space-x-8">
-                        <li><a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
-                        <li><a href="tribute wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
-                        <li><a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
-                        <li><a href="qr locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">QR Locator</a></li>
-                        <li><a href="qr share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share QR</a></li>
-                        <li><a href="remembrance.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
-                        <li><a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
-                        <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-                        <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-                        <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
-                    </ul>
-                </div>
-                <div class="md:hidden">
-                    <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <a href="dashboard.html" class="flex items-center space-x-3">
+                    <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
+                    <span class="font-semibold text-white text-xl">HonorQR</span>
+                </a>
+            </div>
+            <div class="md:flex hidden md:ml-4">
+                <ul class="flex space-x-8">
+                    <li><a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
+                    <li><a href="tribute wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a></li>
+                    <li><a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
+                    <li><a href="qr locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Locator</a></li>
+                    <li><a href="qr share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
+                    <li><a href="remembrance.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
+                    <li><a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
+                    <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                    <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                    <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-        <div class="hidden md:hidden" id="mobile-menu">
-            <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
-                <li><a href="profile.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
-                <li><a href="tribute wall.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
-                <li><a href="gallery.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
-                <li><a href="qr locator.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">QR Locator</a></li>
-                <li><a href="qr share.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Share QR</a></li>
-                <li><a href="remembrance.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
-                <li><a href="chatbot.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
-                <li><a href="faq.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-                <li><a href="login.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-                <li><a href="logout.html" class="block px-4 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
+    </div>
+    <div class="hidden md:hidden" id="mobile-menu">
+        <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
+            <li><a href="profile.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
+            <li><a href="tribute wall.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
+            <li><a href="gallery.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
+            <li><a href="qr locator.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">QR Locator</a></li>
+            <li><a href="qr share.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Share QR</a></li>
+            <li><a href="remembrance.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
+            <li><a href="chatbot.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
+            <li><a href="faq.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+            <li><a href="login.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+            <li><a href="logout.html" class="block px-4 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        document.getElementById('hamburger-button').addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-    </script>
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+
 
     <!-- Main Content -->
     <main class="container mx-auto mt-20">
@@ -86,130 +74,43 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Gallery Item -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="IMAGES/IMG-20240618-WA0031.jpg" alt="Photo Tribute" class="w-full object-cover post-img">
+                <img src="IMAGES/IMG-20240618-WA0031.jpg" alt="Photo Tribute" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <div class="flex justify-between items-center mb-2">
-                        <div class="flex items-center">
-                            <button class="text-gray-500 mr-2" onclick="toggleLike(this)">❤️</button>
-                            <span class="text-gray-600">24 likes</span>
-                        </div>
-                        <button class="text-gray-500" onclick="toggleCommentSection(this)">💬 3 comments</button>
-                    </div>
-                    <div class="hidden comment-section">
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Jane:</span>
-                            <span class="text-gray-600">Beautiful memory!</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Mark:</span>
-                            <span class="text-gray-600">Love this!</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Emily:</span>
-                            <span class="text-gray-600">Amazing photo.</span>
-                        </div>
-                        <input type="text" class="w-full p-2 border rounded-lg" placeholder="Add a comment">
-                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Photo Tribute</h2>
+                    <p class="text-gray-600">A cherished memory captured in time.</p>
                 </div>
             </div>
             <!-- Gallery Item -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <video controls class="w-full object-cover post-video">
+                <video controls class="w-full h-48 object-cover">
                     <source src="videos/sample-video1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="p-4">
-                    <div class="flex justify-between items-center mb-2">
-                        <div class="flex items-center">
-                            <button class="text-gray-500 mr-2" onclick="toggleLike(this)">❤️</button>
-                            <span class="text-gray-600">15 likes</span>
-                        </div>
-                        <button class="text-gray-500" onclick="toggleCommentSection(this)">💬 2 comments</button>
-                    </div>
-                    <div class="hidden comment-section">
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Sarah:</span>
-                            <span class="text-gray-600">Great video!</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">John:</span>
-                            <span class="text-gray-600">So touching.</span>
-                        </div>
-                        <input type="text" class="w-full p-2 border rounded-lg" placeholder="Add a comment">
-                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Video Tribute</h2>
+                    <p class="text-gray-600">A memorable moment shared through video.</p>
                 </div>
             </div>
             <!-- Gallery Item -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="IMAGES/IMG-20240711-WA0007.jpg" alt="Photo Tribute" class="w-full object-cover post-img">
+                <img src="IMAGES/IMG-20240711-WA0007.jpg" alt="Photo Tribute" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <div class="flex justify-between items-center mb-2">
-                        <div class="flex items-center">
-                            <button class="text-gray-500 mr-2" onclick="toggleLike(this)">❤️</button>
-                            <span class="text-gray-600">30 likes</span>
-                        </div>
-                        <button class="text-gray-500" onclick="toggleCommentSection(this)">💬 5 comments</button>
-                    </div>
-                    <div class="hidden comment-section">
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Alice:</span>
-                            <span class="text-gray-600">Lovely photo.</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Bob:</span>
-                            <span class="text-gray-600">Wonderful memory!</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Cathy:</span>
-                            <span class="text-gray-600">So beautiful.</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Dan:</span>
-                            <span class="text-gray-600">Love this picture.</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Ella:</span>
-                            <span class="text-gray-600">Incredible shot!</span>
-                        </div>
-                        <input type="text" class="w-full p-2 border rounded-lg" placeholder="Add a comment">
-                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Photo Tribute</h2>
+                    <p class="text-gray-600">A special day captured beautifully.</p>
                 </div>
             </div>
             <!-- Gallery Item -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <video controls class="w-full object-cover post-video">
+                <video controls class="w-full h-48 object-cover">
                     <source src="videos/sample-video2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="p-4">
-                    <div class="flex justify-between items-center mb-2">
-                        <div class="flex items-center">
-                            <button class="text-gray-500 mr-2" onclick="toggleLike(this)">❤️</button>
-                            <span class="text-gray-600">18 likes</span>
-                        </div>
-                        <button class="text-gray-500" onclick="toggleCommentSection(this)">💬 4 comments</button>
-                    </div>
-                    <div class="hidden comment-section">
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">James:</span>
-                            <span class="text-gray-600">So touching!</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Anna:</span>
-                            <span class="text-gray-600">Great memories.</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Mia:</span>
-                            <span class="text-gray-600">Loved it.</span>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-gray-900 font-semibold">Oliver:</span>
-                            <span class="text-gray-600">Amazing video.</span>
-                        </div>
-                        <input type="text" class="w-full p-2 border rounded-lg" placeholder="Add a comment">
-                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900">Video Tribute</h2>
+                    <p class="text-gray-600">Celebrating a milestone.</p>
                 </div>
             </div>
+            <!-- More items can be added similarly -->
         </div>
     </main>
 
@@ -226,24 +127,10 @@
     </footer>
 
     <script>
-        function toggleLike(button) {
-            const likeText = button.nextElementSibling;
-            const [emoji, count] = likeText.textContent.split(' ');
-            const newCount = button.classList.contains('liked') ? parseInt(count) - 1 : parseInt(count) + 1;
-            button.classList.toggle('liked');
-            likeText.textContent = `${emoji} ${newCount}`;
-        }
-
-        function toggleCommentSection(button) {
-            const commentSection = button.parentElement.nextElementSibling;
-            commentSection.classList.toggle('hidden');
-        }
-
-        document.getElementById('hamburger-button').addEventListener('click', () => {
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
     </script>
 </body>
-
 </html>

@@ -7,43 +7,42 @@
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Custom styles -->
-    <link href="public/styles.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
     <!-- Navigation -->
-    <nav class="top-0 left-0 z-50 fixed border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-md border-b w-full">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
-            <div class="flex justify-between items-center h-16">
+    <nav class="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700 fixed top-0 left-0 w-full z-50 shadow-md">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
                 <!-- Logo and Branding -->
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="IMAGES/IMG-20240708-WA0002.jpg" class="h-10" alt="HonorQR Logo">
-                        <span class="font-semibold text-gray-900 text-xl dark:text-white">HonorQR</span>
+                        <span class="text-xl font-semibold text-gray-900 dark:text-white">HonorQR</span>
                     </a>
                 </div>
                 <!-- Desktop Menu -->
-                <div class="md:flex hidden md:ml-4">
+                <div class="hidden md:flex md:ml-4">
                     <ul class="flex space-x-8">
                         <li>
-                            <a href="index.html" class="hover:bg-gray-100 dark:hover:bg-gray-700 px-3 py-2 rounded text-gray-900 dark:hover:text-blue-500 dark:text-white">Home</a>
+                            <a href="index.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Home</a>
                         </li>
                         <li>
-                            <a href="profile.html" class="hover:bg-gray-100 dark:hover:bg-gray-700 px-3 py-2 rounded text-gray-900 dark:hover:text-blue-500 dark:text-white">Profile</a>
+                            <a href="profile.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Profile</a>
                         </li>
                         <li>
-                            <a href="notifications.html" class="hover:bg-gray-100 dark:hover:bg-gray-700 px-3 py-2 rounded text-gray-900 dark:hover:text-blue-500 dark:text-white">Notifications</a>
+                            <a href="notifications.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Notifications</a>
                         </li>
                         <li>
-                            <a href="billing.html" class="hover:bg-gray-100 dark:hover:bg-gray-700 px-3 py-2 rounded text-gray-900 dark:hover:text-blue-500 dark:text-white">Billing</a>
+                            <a href="billing.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Billing</a>
                         </li>
                         <li>
-                            <a href="help.html" class="hover:bg-gray-100 dark:hover:bg-gray-700 px-3 py-2 rounded text-gray-900 dark:hover:text-blue-500 dark:text-white">Help & Support</a>
+                            <a href="help.html" class="px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500 dark:hover:bg-gray-700">Help & Support</a>
                         </li>
                     </ul>
                 </div>
                 <!-- Mobile Menu Toggle -->
                 <div class="md:hidden">
-                    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex justify-center items-center hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-lg text-gray-500 dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false">
+                    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center justify-center p-2 text-gray-500 rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700" aria-controls="navbar-default" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -55,77 +54,77 @@
     </nav>
 
     <!-- Dashboard Content -->
-    <section id="dashboard" class="flex justify-center items-center bg-gray-100 px-4 sm:px-6 lg:px-8 py-12 min-h-screen">
-        <div class="space-y-8 bg-white shadow-lg p-8 rounded-lg w-full max-w-4xl">
+    <section id="dashboard" class="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl w-full space-y-8 bg-white p-8 rounded-lg shadow-lg">
             <div class="text-center">
-                <img class="mx-auto logo" src="IMAGES/IMG-20240708-WA0002.jpg" alt="logo">
-                <h2 class="mt-6 font-extrabold text-3xl text-gray-900">Dashboard</h2>
-                <p class="mt-2 text-gray-500 text-sm">Manage your HonorQR account here.</p>
+                <img class="logo mx-auto" src="IMAGES/IMG-20240708-WA0002.jpg" alt="logo">
+                <h2 class="mt-6 text-3xl font-extrabold text-gray-900">Dashboard</h2>
+                <p class="mt-2 text-sm text-gray-500">Manage your HonorQR account here.</p>
             </div>
 
             <!-- Dashboard Sections -->
-            <div class="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-8">
-                <!-- Profile -->
-                <a href="profile.html" class="block hover:bg-gray-100 border rounded-lg w-full text-center transition duration-300 overflow-hidden">
-                    <div>
-                        <img src="IMAGES/DALL·E 2024-07-30 16.34.01 - A profile image for a website dashboard, featured on an iPhone screen. The screen should show a circular photo frame with a person's headshot inside, .webp" alt="Profile" class="block mx-auto w-full h-48 object-cover">
-                        <p class="pt-4 pb-4 font-medium text-gray-900 text-sm">Profile</p>
-                    </div>
-                </a>
-                <!-- Tribute Wall -->
-                <a href="tribute-wall.html" class="block hover:bg-gray-100 border rounded-lg w-full text-center transition duration-300 overflow-hidden">
-                    <div>
-                        <img src="IMAGES/DALL·E 2024-07-30 16.32.11 - A digital tribute wall displayed on an iPhone screen. The screen should show a grid of memorial plaques or cards with rounded corners, each containing.webp" alt="Tribute Wall" class="block mx-auto w-full h-48 object-cover">
-                        <p class="pt-4 pb-4 font-medium text-gray-900 text-sm">Tribute Wall</p>
-                    </div>
-                </a>
-                <!-- Gallery -->
-                <a href="#" class="block hover:bg-gray-100 border rounded-lg w-full text-center transition duration-300 overflow-hidden">
-                    <div>
-                        <img src="IMAGES/DALL·E 2024-07-30 16.28.54 - A visually appealing web gallery thumbnail with a soft, modern aesthetic. The image should include a grid of photos arranged in a 3x3 format with a sl.webp" alt="Gallery" class="block mx-auto w-full h-48 object-cover">
-                        <p class="pt-4 pb-4 font-medium text-gray-900 text-sm">Gallery</p>
-                    </div>
-                </a>
-                <!-- QR Locator -->
-                <a href="#" class="block hover:bg-gray-100 border rounded-lg w-full text-center transition duration-300 overflow-hidden">
-                    <div>
-                        <img src="IMAGES/DALL·E 2024-07-30 16.36.15 - A QR grave site locator image for a website dashboard, featured on an iPhone screen. The screen should display a map with markers indicating grave sit.webp" alt="QR Locator" class="block mx-auto w-full h-48 object-cover">
-                        <p class="pt-4 pb-4 font-medium text-gray-900 text-sm">QR Locator</p>
-                    </div>
-                </a>
-                <!-- Share QR -->
-                <a href="#" class="block hover:bg-gray-100 border rounded-lg w-full text-center transition duration-300 overflow-hidden">
-                    <div>
-                        <img src="IMAGES/DALL·E 2024-07-30 16.37.24 - A 'Share QR' feature displayed on an iPhone screen for a website dashboard. The screen should show a QR code prominently in the center, with options t.webp" alt="Share QR" class="block mx-auto w-full h-48 object-cover">
-                        <p class="pt-4 pb-4 font-medium text-gray-900 text-sm">Share QR</p>
-                    </div>
-                </a>
-                <!-- Remembrance -->
-                <a href="#" class="block hover:bg-gray-100 border rounded-lg w-full text-center transition duration-300 overflow-hidden">
-                    <div>
-                        <img src="IMAGES/DALL·E 2024-07-30 16.09.25 - A calendar with a heart symbol in a serene setting with soft lighting and potted plants, similar to the provided image.webp" alt="Remembrance" class="block mx-auto w-full h-48 object-cover">
-                        <p class="pt-4 pb-4 font-medium text-gray-900 text-sm">Remembrance</p>
-                    </div>
-                </a>
-                <!-- Chatbot -->
-                <a href="#" class="block hover:bg-gray-100 border rounded-lg w-full text-center transition duration-300 overflow-hidden">
-                    <div>
-                        <img src="IMAGES/DALL·E 2024-07-30 16.10.32 - A speech bubble with a smiling robot face in a calm, elegant setting with soft lighting, similar to the provided image.webp" alt="Chatbot" class="block mx-auto w-full h-48 object-cover">
-                        <p class="pt-4 pb-4 font-medium text-gray-900 text-sm">Chatbot</p>
-                    </div>
-                </a>
-                <!-- FAQ -->
-                <a href="#" class="block hover:bg-gray-100 border rounded-lg w-full text-center transition duration-300 overflow-hidden">
-                    <div>
-                        <img src="IMAGES/DALL·E 2024-07-30 16.10.37 - A question mark inside a circle in a serene setting with soft lighting and potted plants, similar to the provided image.webp" alt="FAQ" class="block mx-auto w-full h-48 object-cover">
-                        <p class="pt-4 pb-4 font-medium text-gray-900 text-sm">FAQ</p>
-                    </div>
-                </a>
-            </div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Profile -->
+            <a href="profile.html" class="block w-full text-center border rounded-lg hover:bg-gray-100 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.34.01 - A profile image for a website dashboard, featured on an iPhone screen. The screen should show a circular photo frame with a person's headshot inside, .webp" alt="Profile" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium text-gray-900">Profile</p>
+                </div>
+            </a>
+            <!-- Tribute Wall -->
+            <a href="#" class="block w-full text-center border rounded-lg hover:bg-gray-100 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.32.11 - A digital tribute wall displayed on an iPhone screen. The screen should show a grid of memorial plaques or cards with rounded corners, each containing.webp" alt="Tribute Wall" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium text-gray-900">Tribute Wall</p>
+                </div>
+            </a>
+            <!-- Gallery -->
+            <a href="#" class="block w-full text-center border rounded-lg hover:bg-gray-100 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.28.54 - A visually appealing web gallery thumbnail with a soft, modern aesthetic. The image should include a grid of photos arranged in a 3x3 format with a sl.webp" alt="Gallery" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium text-gray-900">Gallery</p>
+                </div>
+            </a>
+            <!-- QR Locator -->
+            <a href="#" class="block w-full text-center border rounded-lg hover:bg-gray-100 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.36.15 - A QR grave site locator image for a website dashboard, featured on an iPhone screen. The screen should display a map with markers indicating grave sit.webp" alt="QR Locator" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium text-gray-900">QR Locator</p>
+                </div>
+            </a>
+            <!-- Share QR -->
+            <a href="#" class="block w-full text-center border rounded-lg hover:bg-gray-100 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.37.24 - A 'Share QR' feature displayed on an iPhone screen for a website dashboard. The screen should show a QR code prominently in the center, with options t.webp" alt="Share QR" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium text-gray-900">Share QR</p>
+                </div>
+            </a>
+            <!-- Remembrance -->
+            <a href="#" class="block w-full text-center border rounded-lg hover:bg-gray-100 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.09.25 - A calendar with a heart symbol in a serene setting with soft lighting and potted plants, similar to the provided image.webp" alt="Remembrance" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium text-gray-900">Remembrance</p>
+                </div>
+            </a>
+            <!-- Chatbot -->
+            <a href="#" class="block w-full text-center border rounded-lg hover:bg-gray-100 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.10.32 - A speech bubble with a smiling robot face in a calm, elegant setting with soft lighting, similar to the provided image.webp" alt="Chatbot" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium text-gray-900">Chatbot</p>
+                </div>
+            </a>
+            <!-- FAQ -->
+            <a href="#" class="block w-full text-center border rounded-lg hover:bg-gray-100 transition duration-300 overflow-hidden">
+                <div>
+                    <img src="IMAGES/DALL·E 2024-07-30 16.10.37 - A question mark inside a circle in a serene setting with soft lighting and potted plants, similar to the provided image.webp" alt="FAQ" class="block mx-auto h-48 w-full object-cover">
+                    <p class="pt-4 pb-4 text-sm font-medium text-gray-900">FAQ</p>
+                </div>
+            </a>
+        </div>
 
             <!-- Logout Button -->
             <div class="mt-6">
-                <button class="py-2 rounded-md focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 w-full font-semibold text-sm uppercase tracking-wide btn-logout focus:outline-none">
+                <button class="btn-logout w-full py-2 rounded-md text-sm font-semibold uppercase tracking-wide focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     Logout
                 </button>
             </div>
@@ -133,11 +132,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-white">
-        <div class="mx-auto px-4 container">
-            <div class="flex md:flex-row flex-col justify-between items-center">
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="mb-4 md:mb-0">
-                    <span class="font-semibold text-2xl">HonorQR</span>
+                    <span class="text-2xl font-semibold">HonorQR</span>
                     <span class="block text-gray-400">© 2024 All rights reserved.</span>
                 </div>
                 <div class="flex space-x-4">
