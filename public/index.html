@@ -15,181 +15,125 @@
         /* Loading animation */
         #loading {
             position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
+            inset: 0;
             background: white;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 1000;
-        }
-        #loading img {
-            width: 100px;
+            transition: opacity 0.5s ease-in-out;
         }
 
-        /* Custom cursor styles */
+        #loading img {
+            width: 80px;
+        }
+
+        /* Custom cursors */
         body {
             cursor: url('images/default-cursor.png'), auto;
         }
+
         .btn-primary {
             cursor: url('images/cursor-pointer.png'), pointer;
         }
+
         .interactive-element:hover {
             cursor: url('images/cursor-hover.png'), pointer;
-        }
-        .background-change:hover {
-            background-color: rgba(37, 99, 235, 0.1);
-        }
-        .pulsate:hover {
-            animation: pulse 0.5s infinite;
         }
 
         /* Pulsating animation */
         @keyframes pulse {
-            0% {
+            0%, 100% {
                 transform: scale(1);
                 opacity: 1;
             }
+
             50% {
-                transform: scale(1.2);
+                transform: scale(1.1);
                 opacity: 0.7;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
             }
         }
 
         /* Hero background */
         .hero-bg {
-            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('images/hero.webp');
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero.webp');
             background-size: cover;
-            background-position: center center;
+            background-position: center;
         }
 
-        /* Primary button styles */
+        /* Primary button */
         .btn-primary {
             background-color: #2563eb;
-            color: #fff;
-        }
-        .btn-primary:hover {
-            background-color: #1d4ed8;
+            color: white;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        /* Overlay */
-        .overlay {
-            background: rgba(0, 0, 0, 0.5);
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         /* Fade-in animation */
+        .fade-in {
+            animation: fadeIn 2s ease-in forwards;
+            opacity: 0;
+        }
+
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
             to {
                 opacity: 1;
             }
         }
-        .fade-in {
-            animation: fadeIn 2s ease-in;
-        }
-
-        /* Hover effects */
-        .hover-scale-up:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out;
-        }
-        .hover-fade-in:hover {
-            opacity: 0.8;
-            transition: opacity 0.3s ease-in-out;
-        }
 
         /* Card styles */
         .card {
-            position: relative;
-            width: 100%;
-            height: 350px;
-            color: #2e2d31;
-            background: #131313;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            border-radius: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
+
         .card img {
-            width: 100%;
-            height: 100%;
+            border-bottom: 3px solid #2563eb;
+            height: 200px;
             object-fit: cover;
-            border-radius: 20px 20px 0 0;
-        }
-        .card_content {
-            position: absolute;
-            left: 0;
-            bottom: 0;
             width: 100%;
-            padding: 20px;
-            background: #f2f2f2;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            transform: translateY(150px);
-            transition: transform 0.25s;
-        }
-        .card_content::before {
-            content: '';
-            position: absolute;
-            top: -47px;
-            right: -45px;
-            width: 100px;
-            height: 100px;
-            transform: rotate(-175deg);
-            border-radius: 50%;
-            box-shadow: inset 48px 48px #f2f2f2;
-        }
-        .card_title {
-            color: #131313;
-            line-height: 15px;
-        }
-        .card_subtitle {
-            display: block;
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-        .card_description {
-            font-size: 14px;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-        .card:hover .card_content {
-            transform: translateY(0);
-        }
-        .card:hover .card_description {
-            opacity: 1;
-            transition-delay: 0.25s;
         }
 
-        /* Swiper styles */
-        .swiper-container {
-            width: 100%;
-            height: 100%;
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
 
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
+        .card-content {
+            padding: 16px;
+        }
+
+        /* Navbar transition */
+        nav {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        #mobile-menu.hidden {
+            max-height: 0;
+        }
+
+        #mobile-menu:not(.hidden) {
+            max-height: 300px; /* Adjust based on content height */
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -201,27 +145,26 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="nav-bg fixed top-0 left-0 w-full z-50 shadow-md">
+    <nav class="nav-bg fixed top-0 left-0 w-full z-50 shadow-md bg-white">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center space-x-3">
-                        <img src="images/logo.jpg" class="h-10" alt="HonorQR Logo">
-                        <span class="text-xl font-semibold text-white">HonorQR</span>
-                    </a>
-                </div>
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="images/logo.jpg" class="h-10" alt="HonorQR Logo">
+                    <span class="text-xl font-semibold text-gray-900">HonorQR</span>
+                </a>
                 <div class="hidden md:flex md:ml-4">
-                    <ul class="flex space-x-8">
-                        <li><a href="index.html" class="nav-link px-3 py-2 rounded">Home</a></li>
-                        <li><a href="about.html" class="nav-link px-3 py-2 rounded">About</a></li>
-                        <li><a href="features.html" class="nav-link px-3 py-2 rounded">Features</a></li>
-                        <li><a href="prices.html" class="nav-link px-3 py-2 rounded">Prices</a></li>
-                        <li><a href="contact.html" class="nav-link px-3 py-2 rounded">Contact</a></li>
-                        <li><a href="dashboard.html" class="nav-link px-3 py-2 rounded">Dashboard</a></li>
+                    <ul class="flex space-x-8 text-gray-900">
+                        <li><a href="index.html" class="nav-link px-3 py-2 rounded hover:text-blue-600">Home</a></li>
+                        <li><a href="about.html" class="nav-link px-3 py-2 rounded hover:text-blue-600">About</a></li>
+                        <li><a href="features.html" class="nav-link px-3 py-2 rounded hover:text-blue-600">Features</a></li>
+                        <li><a href="prices.html" class="nav-link px-3 py-2 rounded hover:text-blue-600">Prices</a></li>
+                        <li><a href="contact.html" class="nav-link px-3 py-2 rounded hover:text-blue-600">Contact</a></li>
+                        <li><a href="signup.html" class="nav-link px-3 py-2 rounded hover:text-blue-600">Signup</a></li>
+                        <li><a href="dashboard.html" class="nav-link px-3 py-2 rounded hover:text-blue-600">Dashboard</a></li>
                     </ul>
                 </div>
                 <div class="md:hidden">
-                    <button id="hamburger-button" class="inline-flex items-center justify-center p-2 text-white rounded-lg hover:bg-gray-700">
+                    <button id="hamburger-button" class="p-2 text-gray-900 rounded hover:bg-gray-200">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -231,29 +174,44 @@
             </div>
         </div>
         <div class="hidden md:hidden" id="mobile-menu">
-            <ul class="flex flex-col mt-2 space-y-2 bg-gray-700">
-                <li><a href="index.html" class="nav-link block px-4 py-2 rounded">Home</a></li>
-                <li><a href="about.html" class="nav-link block px-4 py-2 rounded">About</a></li>
-                <li><a href="features.html" class="nav-link block px-4 py-2 rounded">Features</a></li>
-                <li><a href="prices.html" class="nav-link block px-4 py-2 rounded">Prices</a></li>
-                <li><a href="faq.html" class="nav-link block px-4 py-2 rounded">FAQ</a></li>
-                <li><a href="contact.html" class="nav-link block px-4 py-2 rounded">Contact</a></li>
-                <li><a href="login.html" class="nav-link block px-4 py-2 rounded">Login</a></li>
+            <ul class="flex flex-col mt-2 space-y-2 bg-gray-100">
+                <li><a href="index.html" class="nav-link block px-4 py-2">Home</a></li>
+                <li><a href="about.html" class="nav-link block px-4 py-2">About</a></li>
+                <li><a href="features.html" class="nav-link block px-4 py-2">Features</a></li>
+                <li><a href="prices.html" class="nav-link block px-4 py-2">Prices</a></li>
+                <li><a href="faq.html" class="nav-link block px-4 py-2">FAQ</a></li>
+                <li><a href="contact.html" class="nav-link block px-4 py-2">Contact</a></li>
+                <li><a href="login.html" class="nav-link block px-4 py-2">Login</a></li>
             </ul>
         </div>
     </nav>
 
+    <script>
+        document.getElementById('hamburger-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('bg-white', 'shadow-lg');
+            } else {
+                nav.classList.remove('bg-white', 'shadow-lg');
+            }
+        });
+    </script>
+
     <!-- Hero Section -->
-    <section class="hero-bg bg-cover bg-center h-screen flex items-center justify-center">
-        <div class="container mx-auto text-center text-white px-4">
+    <section class="hero-bg bg-cover bg-center h-screen flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-4">
             <h1 class="text-6xl font-serif mb-4 fade-in">Welcome to HonorQR.</h1>
-            <p class="text-2xl font-sans mb-8 fade-in" data-aos="fade-up">Embrace the Future of Digital Memorials</p>
+            <p class="text-2xl mb-8 fade-in" data-aos="fade-up">Embrace the Future of Digital Memorials</p>
             <a href="#features" class="btn-primary py-3 px-6 rounded-lg text-lg">Discover More</a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-12 bg-white">
+    <section id="features" class="py-12 bg-gray-100">
         <div class="container mx-auto px-4">
             <div class="mb-8 text-center">
                 <h2 class="text-4xl font-bold mb-4 text-gray-900">Our Features</h2>
@@ -261,27 +219,24 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <article class="card">
-                    <img src="images/feature1.jpg" alt="Journey Through Memories" class="w-full h-full object-cover rounded-lg">
-                    <div class="card_content">
-                        <span class="card_title">Journey Through Memories</span>
-                        <span class="card_subtitle">A gallery filled with moments frozen in time.</span>
-                        <p class="card_description">Delve into joyful celebrations and quiet reflections, ensuring the essence of your loved one's journey remains vibrant and alive.</p>
+                    <img src="images/Photoleap_27_06_2024_00_10_28_ghNm7.jpg" alt="Journey Through Memories">
+                    <div class="card-content">
+                        <h3 class="text-xl font-semibold mb-2">Journey Through Memories</h3>
+                        <p class="text-gray-700">Delve into joyful celebrations and quiet reflections, ensuring the essence of your loved one's journey remains vibrant and alive.</p>
                     </div>
                 </article>
                 <article class="card">
-                    <img src="images/feature2.jpg" alt="Connect Beyond Boundaries" class="w-full h-full object-cover rounded-lg">
-                    <div class="card_content">
-                        <span class="card_title">Connect Beyond Boundaries</span>
-                        <span class="card_subtitle">Our interactive Tribute Wall.</span>
-                        <p class="card_description">A gathering place for heartfelt messages, shared stories, and expressions of love, fostering a community of remembrance and support.</p>
+                    <img src="images/feature 2.jpg" alt="Connect Beyond Boundaries">
+                    <div class="card-content">
+                        <h3 class="text-xl font-semibold mb-2">Connect Beyond Boundaries</h3>
+                        <p class="text-gray-700">A gathering place for heartfelt messages, shared stories, and expressions of love, fostering a community of remembrance and support.</p>
                     </div>
                 </article>
                 <article class="card">
-                    <img src="images/feature3.jpg" alt="Empowerment Through Personalization" class="w-full h-full object-cover rounded-lg">
-                    <div class="card_content">
-                        <span class="card_title">Empowerment Through Personalization</span>
-                        <span class="card_subtitle">Shape your loved one's digital legacy.</span>
-                        <p class="card_description">Customize the profile, pin special memories, and engage in meaningful dialogue, creating a space that truly reflects the essence of their life.</p>
+                    <img src="images/feature 3.jpg" alt="Empowerment Through Personalization">
+                    <div class="card-content">
+                        <h3 class="text-xl font-semibold mb-2">Empowerment Through Personalization</h3>
+                        <p class="text-gray-700">Customize the profile, pin special memories, and engage in meaningful dialogue, creating a space that truly reflects the essence of their life.</p>
                     </div>
                 </article>
             </div>
@@ -293,33 +248,33 @@
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 fade-in">HonorQR Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-200">
-                    <img src="images/feature1.jpg" alt="Feature 1" class="w-20 h-20 mx-auto mb-4">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300 fade-in">
+                    <img src="images/IMG-20240711-WA0021.jpg" alt="Feature 1" class="w-20 h-20 mx-auto mb-4">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Digital Memorials</h3>
                     <p class="text-gray-700">Create personalized digital memorials that preserve the legacy of your loved ones with photos, videos, and stories.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-400">
-                    <img src="images/feature2.jpg" alt="Feature 2" class="w-20 h-20 mx-auto mb-4">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300 fade-in">
+                    <img src="images/IMG-20240618-WA0018.jpg" alt="Feature 2" class="w-20 h-20 mx-auto mb-4">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Interactive Tribute Wall</h3>
                     <p class="text-gray-700">Engage with a community of loved ones through shared messages and stories on the interactive tribute wall.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-600">
-                    <img src="images/feature3.jpg" alt="Feature 3" class="w-20 h-20 mx-auto mb-4">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300 fade-in">
+                    <img src="images/IMG-20240618-WA0042.jpg" alt="Feature 3" class="w-20 h-20 mx-auto mb-4">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">QR Code Integration</h3>
                     <p class="text-gray-700">Seamlessly link physical memorials to digital profiles with durable, weatherproof QR codes.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-800">
-                    <img src="images/feature4.jpg" alt="Feature 4" class="w-20 h-20 mx-auto mb-4">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300 fade-in">
+                    <img src="images/Photoleap_27_06_2024_00_24_54_MOFQY.jpg" alt="Feature 4" class="w-20 h-20 mx-auto mb-4">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Audio Memories</h3>
                     <p class="text-gray-700">Preserve voices and stories with audio messages that add a personal and intimate dimension to memorials.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-1000">
-                    <img src="images/feature5.jpg" alt="Feature 5" class="w-20 h-20 mx-auto mb-4">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300 fade-in">
+                    <img src="images/IMG-20240618-WA0038.jpg" alt="Feature 5" class="w-20 h-20 mx-auto mb-4">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Multilingual Support</h3>
                     <p class="text-gray-700">Ensure accessibility for a global audience with multilingual support, allowing everyone to engage meaningfully.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 fade-in animation-delay-1200">
-                    <img src="images/feature6.jpg" alt="Feature 6" class="w-20 h-20 mx-auto mb-4">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300 fade-in">
+                    <img src="images/IMG-20240708-WA0002.jpg" alt="Feature 6" class="w-20 h-20 mx-auto mb-4">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Mobile App</h3>
                     <p class="text-gray-700">Access and interact with memorials on-the-go with our user-friendly mobile app, ensuring connection anytime, anywhere.</p>
                 </div>
@@ -330,28 +285,25 @@
     <!-- Emotional Appeal Section -->
     <section id="emotional-appeal" class="py-16 bg-white relative overflow-hidden">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 fade-in animation-delay-200 text-center md:text-left">
+            <div class="md:w-1/2 fade-in text-center md:text-left">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Discover a Digital Sanctuary</h2>
                 <p class="text-xl text-gray-700 mb-8">
                     Imagine standing amidst a serene cemetery where each gravestone holds a hidden treasure. With a simple scan of a discreet QR code, a virtual gateway opens, leading you to a personalized web profile dedicated to your loved one. This digital sanctuary preserves their legacy, filled with photos, videos, and heartfelt stories that celebrate their life. HonorQR transforms traditional memorials into a timeless tapestry of remembrance, ensuring that the essence of your loved one endures forever.
                 </p>
-                <button class="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded animation-delay-600 animate-pulse">Learn More</button>
+                <button class="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded animate-pulse">Learn More</button>
             </div>
-            <div class="md:w-1/2 fade-in animation-delay-400 relative">
-                <img src="images/emotional-appeal1.jpg" alt="Digital Sanctuary Image" class="w-full h-auto rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
-                <div class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition duration-300">
-                    <img src="images/emotional-appeal2.jpg" alt="Digital Sanctuary Image" class="w-full h-auto rounded-lg shadow-lg">
-                </div>
+            <div class="md:w-1/2 fade-in relative">
+                <img src="images/Photoleap_29_07_2024_22_22_25_zafM2.jpg" alt="Digital Sanctuary Image" class="w-full h-auto rounded-lg shadow-lg transition duration-300 hover:scale-105">
             </div>
         </div>
     </section>
-    
+
     <!-- Testimonials Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 fade-in">User Stories and Testimonials</h2>
-            <div class="carousel relative fade-in animation-delay-200">
-                <div class="carousel-inner flex">
+            <div class="carousel relative fade-in">
+                <div class="carousel-inner flex transition duration-300">
                     <div class="carousel-item bg-white p-6 rounded-lg shadow-lg">
                         <p class="text-lg text-gray-700 mb-4">"HonorQR helped us create a beautiful tribute for our beloved grandfather. The interactive tribute wall allowed us to share and cherish our memories together."</p>
                         <p class="font-semibold text-gray-900">- Emily R.</p>
@@ -361,40 +313,19 @@
                         <p class="font-semibold text-gray-900">- Sarah W.</p>
                     </div>
                 </div>
-                <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-                <button class="next" onclick="moveCarousel(1)">&#10095;</button>
             </div>
         </div>
     </section>
 
-    <script>
-        let currentIndex = 0;
-
-        function moveCarousel(direction) {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const totalItems = document.querySelectorAll('.carousel-item').length;
-
-            currentIndex += direction;
-
-            if (currentIndex < 0) {
-                currentIndex = totalItems - 1;
-            } else if (currentIndex >= totalItems) {
-                currentIndex = 0;
-            }
-
-            carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    </script>
-    
     <!-- Get Started Section -->
     <section class="py-16 bg-cover bg-center" style="background-image: url('images/hero-bg2.webp');">
-        <div class="container mx-auto px-4 text-center bg-white bg-opacity-70 py-12 rounded-lg">
+        <div class="container mx-auto px-4 text-center bg-white bg-opacity-80 py-12 rounded-lg">
             <h2 class="text-4xl font-bold text-gray-900 mb-4 fade-in">Get Started with HonorQR</h2>
-            <p class="text-xl text-gray-700 mb-8 fade-in animation-delay-200">Experience the transformative power of digital memorials with HonorQR. Create lasting tributes, preserve cherished memories, and celebrate lives lived.</p>
+            <p class="text-xl text-gray-700 mb-8 fade-in">Experience the transformative power of digital memorials with HonorQR. Create lasting tributes, preserve cherished memories, and celebrate lives lived.</p>
             <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
-                <a href="sign-up.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in animation-delay-400">Sign Up</a>
-                <a href="features.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in animation-delay-600">Explore Features</a>
-                <a href="contact.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in animation-delay-800">Contact Support</a>
+                <a href="signup.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in">Sign Up</a>
+                <a href="features.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in">Explore Features</a>
+                <a href="contact.html" class="btn-primary py-3 px-6 rounded-lg text-lg fade-in">Contact Support</a>
             </div>
         </div>
     </section>
@@ -407,21 +338,21 @@
             <form id="contactForm" action="#" method="post" class="max-w-lg mx-auto text-left">
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-4 py-2 input-field" required>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-2 input-field" required>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
                 </div>
                 <div class="mb-4">
                     <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
-                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 input-field" required></textarea>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
                 </div>
                 <button type="submit" class="btn-primary py-3 px-6 rounded-lg text-lg">Send Message</button>
             </form>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
@@ -432,7 +363,7 @@
                     <ul>
                         <li class="mb-2"><a href="about.html" class="hover:underline">About</a></li>
                         <li class="mb-2"><a href="features.html" class="hover:underline">Features</a></li>
-                        <li class="mb-2"><a href="how-it-works.html" class="hover:underline">How It Works</a></li>
+                        <li class="mb-2"><a href="how it works.html" class="hover:underline">How It Works</a></li>
                         <li class="mb-2"><a href="blog.html" class="hover:underline">Blog</a></li>
                         <li class="mb-2"><a href="contact.html" class="hover:underline">Contact</a></li>
                     </ul>
@@ -451,7 +382,7 @@
                     <h3 class="text-xl font-semibold mb-4">Legal</h3>
                     <ul>
                         <li class="mb-2"><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
-                        <li class="mb-2"><a href="Security.html" class="hover:underline">Terms of Use</a></li>
+                        <li class="mb-2"><a href="terms.html" class="hover:underline">Terms of Use</a></li>
                     </ul>
                 </div>
                 <!-- Educational Resources -->
@@ -470,7 +401,6 @@
         </div>
     </footer>
 
-
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -479,60 +409,14 @@
 
         // Hide loading animation after content is loaded
         window.addEventListener('load', function() {
-            document.getElementById('loading').style.display = 'none';
+            document.getElementById('loading').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500);
         });
 
         document.getElementById('hamburger-button').addEventListener('click', function () {
             document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const hoverElements = document.querySelectorAll('.hover-effect');
-            hoverElements.forEach(element => {
-                element.addEventListener('mouseover', function() {
-                    this.classList.add('transform', 'scale-105', 'transition-all', 'duration-300');
-                });
-                element.addEventListener('mouseout', function() {
-                    this.classList.remove('transform', 'scale-105', 'transition-all', 'duration-300');
-                });
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.interactive-element');
-            elements.forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    document.body.style.cursor = 'url(images/cursor-hover.png), pointer';
-                });
-                el.addEventListener('mouseleave', () => {
-                    document.body.style.cursor = 'url(images/default-cursor.png), auto';
-                });
-            });
-        });
-
-        // Form submission to Netlify function
-        document.getElementById('contactForm').addEventListener('submit', async function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            const response = await fetch('/.netlify/functions/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, email, message }),
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                alert('Message sent successfully!');
-            } else {
-                alert('Failed to send the message. Please try again.');
-            }
         });
     </script>
 </body>
