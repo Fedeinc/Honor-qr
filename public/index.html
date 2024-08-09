@@ -174,7 +174,7 @@
                 </div>
             </div>
         </div>
-        <div class="hidden md:hidden" id="mobile-menu">
+        <div id="mobile-menu" class="hidden md:hidden">
             <ul class="flex flex-col space-y-2 bg-gray-100 mt-2">
                 <li><a href="index.html" class="block px-4 py-2 nav-link">Home</a></li>
                 <li><a href="about.html" class="block px-4 py-2 nav-link">About</a></li>
@@ -189,7 +189,9 @@
 
     <script>
         document.getElementById('hamburger-button').addEventListener('click', function () {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('block');
         });
 
         window.addEventListener('scroll', () => {
