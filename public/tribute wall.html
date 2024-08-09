@@ -5,37 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tribute Wall - HonorQR</title>
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="public/styles.css" rel="stylesheet">
+    <!-- Quill.js for Rich Text Editing -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 font-sans">
+
     <!-- Navigation Bar -->
-    <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
-    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-        <div class="flex justify-between items-center h-16">
-            <div class="flex items-center">
+    <nav class="fixed top-0 left-0 z-50 w-full bg-gray-900 shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div class="flex justify-between items-center h-16">
                 <a href="dashboard.html" class="flex items-center space-x-3">
                     <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
                     <span class="font-semibold text-white text-xl">HonorQR</span>
                 </a>
-            </div>
-            <div class="md:flex hidden md:ml-4">
-                <ul class="flex space-x-8">
-                    <li><a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
-                    <li><a href="tribute wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a></li>
-                    <li><a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
-                    <li><a href="qr locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Locator</a></li>
-                    <li><a href="qr share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
-                    <li><a href="remembrance.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
-                    <li><a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
-                    <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-                    <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-                    <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Dashboard</a></li>
-                </ul>
-            </div>
-            <div class="md:hidden">
-                <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
+                <div class="hidden md:flex space-x-8">
+                    <!-- Navigation links -->
+                    <a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a>
+                    <a href="tribute-wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a>
+                    <a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a>
+                    <a href="qr-locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Locator</a>
+                    <a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a>
+                    <a href="remembrance.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Remembrance</a>
+                    <a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a>
+                    <a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a>
+                    <a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a>
+                    <a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a>
+                </div>
+                <button id="hamburger-button" class="md:hidden p-2 rounded-lg text-white hover:bg-gray-700">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -43,120 +43,38 @@
                 </button>
             </div>
         </div>
-    </div>
-    <div class="hidden md:hidden" id="mobile-menu">
-        <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
-            <li><a href="profile.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
-            <li><a href="tribute wall.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
-            <li><a href="gallery.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
-            <li><a href="qr locator.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">QR Locator</a></li>
-            <li><a href="qr share.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Share QR</a></li>
-            <li><a href="remembrance.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
-            <li><a href="chatbot.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
-            <li><a href="faq.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-            <li><a href="login.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-            <li><a href="logout.html" class="block px-4 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
-        </ul>
-    </div>
-</nav>
-
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function () {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        function addReaction(button, emoji) {
-            const currentText = button.textContent.trim();
-            const currentCount = parseInt(currentText.split(' ')[1]) || 0;
-            button.textContent = `${emoji} ${currentCount + 1}`;
-        }
-
-        function sendMessage() {
-            const messageInput = document.getElementById('messageInput');
-            const messageText = messageInput.value.trim();
-            if (messageText !== '') {
-                const messageContainer = document.createElement('article');
-                messageContainer.classList.add('flex', 'justify-end', 'mb-4');
-                messageContainer.innerHTML = `
-                    <div class="bg-green-200 px-4 py-2 rounded">
-                        <p class="text-sm">${messageText}</p>
-                        <div class="flex justify-between items-center">
-                            <p class="text-right text-gray-500 text-xs">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
-                            <button class="text-gray-500 text-xs" onclick="addReaction(this, '❤️')">❤️ 0</button>
-                        </div>
-                    </div>
-                `;
-                document.getElementById('messages').appendChild(messageContainer);
-                messageInput.value = '';
-                messageInput.focus();
-            }
-        }
-
-        function uploadFile(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const fileReader = new FileReader();
-                fileReader.onload = function () {
-                    const fileContainer = document.createElement('article');
-                    fileContainer.classList.add('flex', 'justify-center', 'mb-4');
-                    if (file.type.startsWith('image/')) {
-                        fileContainer.innerHTML = `
-                            <div class="bg-white shadow-md px-4 py-2 rounded">
-                                <p class="text-gray-600 text-sm">Photo Tribute</p>
-                                <img src="${fileReader.result}" alt="Photo Tribute" class="mt-2 rounded-lg w-full">
-                            </div>
-                        `;
-                    } else if (file.type.startsWith('video/')) {
-                        fileContainer.innerHTML = `
-                            <div class="bg-white shadow-md px-4 py-2 rounded">
-                                <p class="text-gray-600 text-sm">Video Tribute</p>
-                                <video controls class="mt-2 rounded-lg w-full">
-                                    <source src="${fileReader.result}" type="${file.type}">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        `;
-                    }
-                    document.getElementById('messages').appendChild(fileContainer);
-                };
-                fileReader.readAsDataURL(file);
-            }
-        }
-    </script>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 mt-2">
+            <ul class="flex flex-col space-y-2">
+                <!-- Mobile navigation links -->
+                <a href="profile.html" class="block px-4 py-2 text-white hover:bg-gray-700">Profile</a>
+                <a href="tribute-wall.html" class="block px-4 py-2 text-white hover:bg-gray-700">Tribute Wall</a>
+                <a href="gallery.html" class="block px-4 py-2 text-white hover:bg-gray-700">Gallery</a>
+                <a href="qr-locator.html" class="block px-4 py-2 text-white hover:bg-gray-700">QR Locator</a>
+                <a href="qr-share.html" class="block px-4 py-2 text-white hover:bg-gray-700">Share QR</a>
+                <a href="remembrance.html" class="block px-4 py-2 text-white hover:bg-gray-700">Remembrance</a>
+                <a href="chatbot.html" class="block px-4 py-2 text-white hover:bg-gray-700">Chatbot</a>
+                <a href="faq.html" class="block px-4 py-2 text-white hover:bg-gray-700">FAQ</a>
+                <a href="login.html" class="block px-4 py-2 text-white hover:bg-gray-700">Login</a>
+                <a href="logout.html" class="block px-4 py-2 text-white hover:bg-red-700">Logout</a>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Main Content -->
-    <main class="mx-auto mt-20 container">
+    <main class="container mx-auto mt-20">
         <div class="flex justify-center">
-            <!-- Tribute Wall -->
-            <section class="flex flex-col bg-white shadow-lg rounded-lg w-full md:w-2/3">
+            <section class="flex flex-col w-full md:w-2/3 bg-white shadow-lg rounded-lg">
                 <header class="flex justify-between items-center p-4 border-b">
                     <div class="flex items-center">
-                        <img class="rounded-full w-10 h-10" src="IMAGES/Photoleap_29_06_2024_16_19_40_LSzLJ.jpg" alt="Tribute Image">
+                        <img class="w-10 h-10 rounded-full" src="IMAGES/Photoleap_29_06_2024_16_19_40_LSzLJ.jpg" alt="Tribute Image">
                         <div class="ml-4">
                             <p class="text-gray-900">Tributes for John Doe</p>
-                            <p class="text-gray-600 text-sm">Family and Friends</p>
+                            <p class="text-sm text-gray-600">Family and Friends</p>
                         </div>
                     </div>
-                    <div class="flex items-center space-x-4">
-                        <button aria-label="Search" class="p-2">
-                            <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path>
-                            </svg>
-                        </button>
-                        <button aria-label="Attach" class="p-2">
-                            <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972s2.472 1.647 3.974 1.647a5.58 5.58 0 0 0 3.972-1.645l9.547-9.548c.769-.768 1.147-1.767 1.058-2.817-.079-.968-.548-1.927-1.319-2.698-1.594-1.592-4.068-1.711-5.517-.262l-7.916 7.915c-.881.881-.792 2.25.214 3.261.959.958 2.423 1.053 3.263.215l5.511-5.512c.28-.28.267-.722.053-.936l-.244-.244c-.191-.191-.567-.349-.957.04l-5.506 5.506c-.18.18-.635.127-.976-.214-.098-.097-.576-.613-.213-.973l7.915-7.917c.818-.817 2.267-.699 3.23.262.5.501.802 1.1.849 1.685.051.573-.156 1.111-.589 1.543l-9.547 9.549a3.97 3.97 0 0 1-2.829 1.171 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.172-2.828c0-1.071.415-2.076 1.172-2.83l7.209-7.211c.157-.157.264-.579.028-.814L11.5 4.36a.572.572 0 0 0-.834.018l-7.205 7.207a5.577 5.577 0 0 0-1.645 3.971z"></path>
-                            </svg>
-                        </button>
-                        <button aria-label="Menu" class="p-2">
-                            <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z"></path>
-                            </svg>
-                        </button>
-                    </div>
                 </header>
-                <div class="flex-1 bg-gray-100 p-4 overflow-auto" id="messages">
+
+                <div id="messages" class="flex-1 p-4 overflow-auto bg-gray-100">
                     <!-- Date -->
                     <div class="flex justify-center mb-4">
                         <div class="bg-gray-200 px-4 py-2 rounded">
@@ -173,103 +91,134 @@
 
                     <!-- Messages -->
                     <article class="flex mb-4">
-                        <div class="bg-gray-100 px-4 py-2 rounded">
+                        <div class="px-4 py-2 rounded bg-gray-100">
                             <p class="text-sm text-teal-600">Jane Doe</p>
                             <p class="text-sm">I remember the wonderful times we shared. You will always be in my heart.</p>
                             <div class="flex justify-between items-center">
-                                <p class="text-right text-gray-500 text-xs">12:45 pm</p>
-                                <button class="text-gray-500 text-xs" onclick="addReaction(this, '👍')">👍 2</button>
+                                <p class="text-xs text-gray-500">12:45 pm</p>
+                                <button class="text-xs text-gray-500" onclick="addReaction(this, '👍')">👍 2</button>
                             </div>
                         </div>
                     </article>
-                    <article class="flex mb-4">
-                        <div class="bg-gray-100 px-4 py-2 rounded">
-                            <p class="text-sm text-purple-600">Mark Smith</p>
-                            <p class="text-sm">Your legacy will live on in all the lives you touched.</p>
-
-                            <div class="flex justify-between items-center">
-                                <p class="text-right text-gray-500 text-xs">1:00 pm</p>
-                                <button class="text-gray-500 text-xs" onclick="addReaction(this, '❤️')">❤️ 3</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="flex justify-end mb-4">
-                        <div class="bg-green-200 px-4 py-2 rounded">
-                            <p class="text-sm">Thinking of you today.</p>
-                            <div class="flex justify-between items-center">
-                                <p class="text-right text-gray-500 text-xs">2:30 pm</p>
-                                <button class="text-gray-500 text-xs" onclick="addReaction(this, '😢')">😢 1</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="flex justify-end mb-4">
-                        <div class="bg-green-200 px-4 py-2 rounded">
-                            <p class="text-sm">Miss you so much.</p>
-                            <div class="flex justify-between items-center">
-                                <p class="text-right text-gray-500 text-xs">3:45 pm</p>
-                                <button class="text-gray-500 text-xs" onclick="addReaction(this, '😢')">😢 4</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="flex mb-4">
-                        <div class="bg-gray-100 px-4 py-2 rounded">
-                            <p class="text-sm text-purple-600">Emily Johnson</p>
-                            <p class="text-sm">Your smile and laughter will never be forgotten.</p>
-                            <div class="flex justify-between items-center">
-                                <p class="text-right text-gray-500 text-xs">4:15 pm</p>
-                                <button class="text-gray-500 text-xs" onclick="addReaction(this, '😊')">😊 5</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Photos and Videos -->
-                    <article class="flex justify-center mb-4">
-                        <div class="bg-white shadow-md px-4 py-2 rounded">
-                            <p class="text-gray-600 text-sm">Photo Tribute</p>
-                            <img src="IMAGES/Photoleap_29_06_2024_16_21_11_N4fVF.jpg" alt="Photo Tribute" class="mt-2 rounded-lg w-full">
-                        </div>
-                    </article>
-                    <article class="flex justify-center mb-4">
-                        <div class="bg-white shadow-md px-4 py-2 rounded">
-                            <p class="text-gray-600 text-sm">Video Tribute</p>
-                            <video controls class="mt-2 rounded-lg w-full">
-                                <source src="images/10485794-uhd_4096_2160_25fps.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </article>
+                    <!-- Additional Messages Here -->
                 </div>
+
                 <footer class="flex items-center p-4 border-t">
                     <div class="relative flex items-center w-full">
-                        <input type="text" class="p-2 border rounded-lg w-full pr-10" placeholder="Type a message" aria-label="Type a message" id="messageInput">
-                        <button aria-label="Send" class="absolute right-0 mr-2 p-2" onclick="sendMessage()">
-                            <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M11.999 14.942c2.001 0 3.531-1.53 3.531-3.531V4.35c0-2.001-1.53-3.531-3.531-3.531S8.469 2.35 8.469 4.35v7.061c0 2.001 1.53 3.531 3.53 3.531zm6.238-3.53c0 3.531-2.942 6.002-6.237 6.002s-6.237-2.471-6.237-6.002H3.761c0 4.001 3.178 7.297 7.061 7.885v3.884h2.354v-3.884c3.884-.588 7.061-3.884 7.061-7.885h-2z"></path>
-                            </svg>
-                        </button>
+                        <!-- Rich Text Editor -->
+                        <div id="editor" class="w-full h-24"></div>
                     </div>
-                    <label for="file-upload" class="p-2 ml-2 cursor-pointer">
-                        <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972s2.472 1.647 3.974 1.647a5.58 5.58 0 0 0 3.972-1.645l9.547-9.548c.769-.768 1.147-1.767 1.058-2.817-.079-.968-.548-1.927-1.319-2.698-1.594-1.592-4.068-1.711-5.517-.262l-7.916 7.915c-.881.881-.792 2.25.214 3.261.959.958 2.423 1.053 3.263.215l5.511-5.512c.28-.28.267-.722.053-.936l-.244-.244c-.191-.191-.567-.349-.957.04l-5.506 5.506c-.18.18-.635.127-.976-.214-.098-.097-.576-.613-.213-.973l7.915-7.917c.818-.817 2.267-.699 3.23.262.5.501.802 1.1.849 1.685.051.573-.156 1.111-.589 1.543l-9.547 9.549a3.97 3.97 0 0 1-2.829 1.171 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.172-2.828c0-1.071.415-2.076 1.172-2.83l7.209-7.211c.157-.157.264-.579.028-.814L11.5 4.36a.572.572 0 0 0-.834.018l-7.205 7.207a5.577 5.577 0 0 0-1.645 3.971z"></path>
-                        </svg>
-                        <input id="file-upload" type="file" class="hidden" onchange="uploadFile(event)">
-                    </label>
+                    <div class="flex items-center ml-2">
+                        <!-- Send Button -->
+                        <button aria-label="Send" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onclick="sendMessage()">
+                            Send
+                        </button>
+                        <!-- File Upload Button -->
+                        <label for="file-upload" class="ml-2 p-2 cursor-pointer">
+                            <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972s2.472 1.647 3.974 1.647a5.58 5.58 0 0 0 3.972-1.645l9.547-9.548c.769-.768 1.147-1.767 1.058-2.817-.079-.968-.548-1.927-1.319-2.698-1.594-1.592-4.068-1.711-5.517-.262l-7.916 7.915c-.881.881-.792 2.25.214 3.261.959.958 2.423 1.053 3.263.215l5.511-5.512c.28-.28.267-.722.053-.936l-.244-.244c-.191-.191-.567-.349-.957.04l-5.506 5.506c-.18.18-.635.127-.976-.214-.098-.097-.576-.613-.213-.973l7.915-7.917c.818-.817 2.267-.699 3.23.262.5.501.802 1.1.849 1.685.051.573-.156 1.111-.589 1.543l-9.547 9.549a3.97 3.97 0 0 1-2.829 1.171 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.172-2.828c0-1.071.415-2.076 1.172-2.83l7.209-7.211c.157-.157.264-.579.028-.814L11.5 4.36a.572.572 0 0 0-.834.018l-7.205 7.207a5.577 5.577 0 0 0-1.645 3.971z"></path>
+                            </svg>
+                            <input id="file-upload" type="file" class="hidden" onchange="uploadFile(event)">
+                        </label>
+                    </div>
                 </footer>
             </section>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-white">
-        <div class="mx-auto text-center container">
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
             <span class="font-bold text-sm">&copy; 2024 HonorQR. All rights reserved.</span>
-            <div class="space-x-4 mt-4">
+            <div class="mt-4 space-x-4">
                 <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
                 <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
                 <a href="#" class="text-gray-400 hover:text-white">Contact</a>
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('hamburger-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize Quill Rich Text Editor
+        var quill = new Quill('#editor', {
+            theme: 'snow',
+            placeholder: 'Type your tribute here...',
+            modules: {
+                toolbar: [
+                    ['bold', 'italic', 'underline'],
+                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                    ['clean']
+                ]
+            }
+        });
+
+        // Send message function
+        function sendMessage() {
+            const content = quill.root.innerHTML;
+            if (content.trim() !== '') {
+                const messageContainer = document.createElement('article');
+                messageContainer.classList.add('flex', 'mb-4');
+                messageContainer.innerHTML = `
+                    <div class="px-4 py-2 rounded bg-green-200">
+                        <div class="text-sm">${content}</div>
+                        <div class="flex justify-between items-center mt-2">
+                            <p class="text-xs text-gray-500">${new Date().toLocaleTimeString()}</p>
+                            <button class="text-xs text-gray-500" onclick="addReaction(this, '👍')">👍 0</button>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('messages').appendChild(messageContainer);
+                quill.setContents([]);
+            }
+        }
+
+        // Add reaction to message
+        function addReaction(button, emoji) {
+            const currentText = button.textContent.trim();
+            const currentCount = parseInt(currentText.split(' ')[1]) || 0;
+            button.textContent = `${emoji} ${currentCount + 1}`;
+        }
+
+        // Upload file (photo or video)
+        function uploadFile(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const fileReader = new FileReader();
+                fileReader.onload = function () {
+                    const fileContainer = document.createElement('article');
+                    fileContainer.classList.add('flex', 'justify-center', 'mb-4');
+                    if (file.type.startsWith('image/')) {
+                        fileContainer.innerHTML = `
+                            <div class="bg-white shadow-md px-4 py-2 rounded">
+                                <p class="text-sm text-gray-600">Photo Tribute</p>
+                                <img src="${fileReader.result}" alt="Photo Tribute" class="w-full mt-2 rounded-lg">
+                            </div>
+                        `;
+                    } else if (file.type.startsWith('video/')) {
+                        fileContainer.innerHTML = `
+                            <div class="bg-white shadow-md px-4 py-2 rounded">
+                                <p class="text-sm text-gray-600">Video Tribute</p>
+                                <video controls class="w-full mt-2 rounded-lg">
+                                    <source src="${fileReader.result}" type="${file.type}">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        `;
+                    }
+                    document.getElementById('messages').appendChild(fileContainer);
+                };
+                fileReader.readAsDataURL(file);
+            }
+        }
+    </script>
 </body>
 
 </html>

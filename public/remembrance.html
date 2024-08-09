@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,16 +18,20 @@
             width: 2px;
             background: #cbd5e0;
         }
+
         .timeline-item {
             position: relative;
             margin: 20px 0;
         }
+
         .timeline-item:nth-child(odd) .timeline-content {
             left: 52%;
         }
+
         .timeline-item:nth-child(even) .timeline-content {
             left: 0;
         }
+
         .timeline-content {
             position: relative;
             width: 45%;
@@ -35,6 +40,7 @@
             border: 1px solid #cbd5e0;
             border-radius: 8px;
         }
+
         .timeline-item:nth-child(odd) .timeline-content::before {
             content: '';
             position: absolute;
@@ -45,6 +51,7 @@
             background: #3182ce;
             border-radius: 50%;
         }
+
         .timeline-item:nth-child(even) .timeline-content::before {
             content: '';
             position: absolute;
@@ -57,6 +64,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-100 font-sans">
     <!-- Navigation Bar -->
     <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
@@ -161,7 +169,7 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             flatpickr('#calendar', {
                 inline: true,
                 enableTime: false,
@@ -202,7 +210,7 @@
                 timeline.appendChild(timelineItem);
             });
 
-            document.getElementById('remembrance-form').addEventListener('submit', function(e) {
+            document.getElementById('remembrance-form').addEventListener('submit', function (e) {
                 e.preventDefault();
                 const title = document.getElementById('title').value;
                 const date = document.getElementById('date').value;
@@ -235,4 +243,5 @@
         });
     </script>
 </body>
+
 </html>

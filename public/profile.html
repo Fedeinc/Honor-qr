@@ -14,63 +14,69 @@
 
     <!-- Navigation -->
     <nav class="top-0 left-0 z-50 fixed bg-gray-900 shadow-md w-full">
-    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-        <div class="flex justify-between items-center h-16">
-            <div class="flex items-center">
-                <a href="dashboard.html" class="flex items-center space-x-3">
-                    <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
-                    <span class="font-semibold text-white text-xl">HonorQR</span>
-                </a>
-            </div>
-            <div class="md:flex hidden md:ml-4">
-                <ul class="flex space-x-8">
-                    <li><a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
-                    <li><a href="tribute wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a></li>
-                    <li><a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
-                    <li><a href="qr locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Locator</a></li>
-                    <li><a href="qr share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
-                    <li><a href="remembrance.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
-                    <li><a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
-                    <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-                    <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-                    <li><a href="dashboard.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Dashboard</a></li>
-                </ul>
-            </div>
-            <div class="md:hidden">
-                <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="dashboard.html" class="flex items-center space-x-3">
+                        <img src="IMAGES/logo.jpg" class="h-10" alt="HonorQR Logo">
+                        <span class="font-semibold text-white text-xl">HonorQR</span>
+                    </a>
+                </div>
+                <div class="md:flex hidden md:ml-4">
+                    <ul class="flex space-x-8">
+                        <li class="relative group">
+                            <a href="profile.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Profile</a>
+                            <div class="absolute left-0 hidden group-hover:block bg-gray-800 border border-gray-700 rounded mt-2 z-10">
+                                <a href="edit-profile.html" class="block px-4 py-2 text-white hover:bg-gray-700">Edit Profile</a>
+                                <a href="settings.html" class="block px-4 py-2 text-white hover:bg-gray-700">Settings</a>
+                            </div>
+                        </li>
+                        <li><a href="tribute wall.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Tribute</a></li>
+                        <li><a href="gallery.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
+                        <li><a href="qr-locator.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Locator</a></li>
+                        <li><a href="qr-share.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Share</a></li>
+                        <li><a href="remembrance.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
+                        <li><a href="chatbot.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
+                        <li><a href="faq.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                        <li><a href="login.html" class="px-3 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                        <li><a href="logout.html" class="px-3 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden">
+                    <button id="hamburger-button" class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-lg text-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="hidden md:hidden" id="mobile-menu">
-        <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
-            <li><a href="profile.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
-            <li><a href="tribute wall.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
-            <li><a href="gallery.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
-            <li><a href="qr locator.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">QR Locator</a></li>
-            <li><a href="qr share.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Share QR</a></li>
-            <li><a href="remembrance.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
-            <li><a href="chatbot.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
-            <li><a href="faq.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
-            <li><a href="login.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
-            <li><a href="logout.html" class="block px-4 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
-        </ul>
-    </div>
-</nav>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <ul class="flex flex-col space-y-2 bg-gray-800 mt-2">
+                <li><a href="profile.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Profile</a></li>
+                <li><a href="tribute-wall.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Tribute Wall</a></li>
+                <li><a href="gallery.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Gallery</a></li>
+                <li><a href="qr-locator.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">QR Locator</a></li>
+                <li><a href="qr-share.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Share QR</a></li>
+                <li><a href="remembrance.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Remembrance</a></li>
+                <li><a href="chatbot.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Chatbot</a></li>
+                <li><a href="faq.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">FAQ</a></li>
+                <li><a href="login.html" class="block px-4 py-2 rounded text-white hover:bg-gray-700">Login</a></li>
+                <li><a href="logout.html" class="block px-4 py-2 rounded text-white hover:bg-red-700">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Profile Header -->
     <header class="bg-white shadow mt-16">
         <div class="max-w-7xl mx-auto">
             <div class="relative">
                 <a href="profile.html"><img class="w-full h-64 object-cover" src="IMAGES/IMG-20240618-WA0031.jpg" alt="Cover Photo"></a>
-<div class="absolute bottom-0 left-0 p-4">
-          <img class="h-32 w-32 rounded-full border-4 border-white" src="IMAGES/Photoleap_29_06_2024_16_19_17_u0BnK.jpg" alt="Profile Picture">
-        <h1 class="text-3xl font-bold text-gray-900 mt-2">John Doe</h1>
-                    <p class="text-gray-600">In loving memory of John Doe, a beloved father, husband, and friend. 1950 - 2023</p>
+                <div class="absolute bottom-0 left-0 p-4 bg-opacity-50 bg-gray-900">
+                    <img class="h-32 w-32 rounded-full border-4 border-white" src="IMAGES/Photoleap_29_06_2024_16_19_17_u0BnK.jpg" alt="Profile Picture">
+                    <h1 class="text-3xl font-bold text-white mt-2">John Doe</h1>
+                    <p class="text-gray-200">In loving memory of John Doe, a beloved father, husband, and friend. 1950 - 2023</p>
                 </div>
             </div>
         </div>
@@ -86,6 +92,7 @@
                         <div class="px-4 py-5 sm:px-6">
                             <h3 class="text-lg leading-6 font-medium text-gray-900">Profile Information</h3>
                             <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and memories of John Doe.</p>
+                            <a href="edit-profile.html" class="mt-4 text-blue-500 hover:underline">Edit Profile</a>
                         </div>
                         <div class="border-t border-gray-200">
                             <dl>
@@ -152,11 +159,20 @@
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script>
+        document.getElementById('hamburger-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>

@@ -37,3 +37,27 @@ def chatbot():
 
 if __name__ == '__main__':
     app.run(debug=True)
+from flask import Flask, render_template, request, redirect, url_for
+
+app = Flask(__name__)
+
+# In-memory storage for messages (for simplicity)
+messages = []
+
+@app.route('/')
+def index():
+    return render_template('tribute_wall.html', messages=messages)
+
+@app.route('/send_message', methods=['POST'])
+def send_message():
+    message_text = request.form.get('message')
+    if message_text:
+        messages.append({
+            'text': message_text,
+            'time': 'Just now',
+            'reactions': {'❤️': 0, '👍': 0, '😢': 0, '😊': 0}
+        })
+    return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
